@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AviaSense - Bird Species Recognition</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Using Google Fonts: Inter for clean, modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Ionicons for Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>AviaSense</h1>
+            <p>Next-Gen Multimodal Bird Species Recognition</p>
+        </header>
+
+        <main>
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="image">
+                    <ion-icon name="image-outline" style="vertical-align: middle; margin-right: 5px;"></ion-icon>
+                    Image Recognition
+                </button>
+                <button class="tab-btn" data-tab="audio">
+                    <ion-icon name="musical-notes-outline"
+                        style="vertical-align: middle; margin-right: 5px;"></ion-icon>
+                    Audio Recognition
+                </button>
+            </div>
+
+            <div id="image-section" class="tab-content active">
+                <div class="upload-area" id="image-upload-area">
+                    <div class="upload-icon">
+                        <ion-icon name="cloud-upload-outline"></ion-icon>
+                    </div>
+                    <p>Drag & Drop or Click to Upload Image</p>
+                    <input type="file" id="image-input" accept="image/*" hidden>
+                </div>
+                <div id="image-preview" class="preview"></div>
+                <button id="predict-image-btn" class="action-btn" disabled>Identify Bird</button>
+            </div>
+
+            <div id="audio-section" class="tab-content">
+                <div class="upload-area" id="audio-upload-area">
+                    <div class="upload-icon">
+                        <ion-icon name="mic-outline"></ion-icon>
+                    </div>
+                    <p>Drag & Drop or Click to Upload Audio</p>
+                    <input type="file" id="audio-input" accept="audio/*" hidden>
+                </div>
+                <div id="audio-preview" class="preview"></div>
+                <button id="predict-audio-btn" class="action-btn" disabled>Identify Bird Call</button>
+            </div>
+
+            <div id="results-area" class="results hidden">
+                <h2>Recognition Results</h2>
+                <div id="loading" class="hidden">
+                    <span class="loader"></span>
+                    <p>Analyzing biological data...</p>
+                </div>
+                <div id="predictions"></div>
+            </div>
+        </main>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>AviaSense</title>
+    <meta name="description" content="AI-powered bird species recognition from photos and audio">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Splash Overlay -->
+    <div id="splash-overlay" class="splash-overlay">
+        <div class="splash-content">
+            <div class="splash-icon-ring">
+                <ion-icon name="leaf-outline"></ion-icon>
+            </div>
+            <h1 class="splash-title">AviaSense</h1>
+            <p class="splash-subtitle">Bird Species Recognition</p>
+            <div class="splash-loader-bar"><div class="splash-loader-fill"></div></div>
+        </div>
+    </div>
+
+    <!-- App Shell -->
+    <div id="app" class="app-shell">
+        <!-- Status Bar Spacer -->
+        <div class="status-bar-spacer"></div>
+
+        <!-- Header -->
+        <header id="app-header" class="app-header">
+            <div class="header-content">
+                <div class="header-brand">
+                    <div class="brand-icon">
+                        <ion-icon name="leaf-outline"></ion-icon>
+                    </div>
+                    <div>
+                        <h1>AviaSense</h1>
+                        <span class="header-tagline">AI Bird Recognition</span>
+                    </div>
+                </div>
+                <div id="network-indicator" class="network-indicator online">
+                    <span class="network-dot"></span>
+                    <span class="network-label">Online</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main id="main-content" class="main-content">
+
+            <!-- Mode Selector Tabs -->
+            <div class="mode-tabs" id="mode-tabs">
+                <button class="mode-tab active" data-mode="image" id="tab-image">
+                    <ion-icon name="camera-outline"></ion-icon>
+                    <span>Photo</span>
+                </button>
+                <button class="mode-tab" data-mode="audio" id="tab-audio">
+                    <ion-icon name="mic-outline"></ion-icon>
+                    <span>Audio</span>
+                </button>
+            </div>
+
+            <!-- ====== IMAGE MODE ====== -->
+            <section id="image-mode" class="mode-section active">
+                <!-- Capture Options -->
+                <div class="capture-grid">
+                    <button id="btn-camera" class="capture-card primary-capture">
+                        <div class="capture-card-glow"></div>
+                        <div class="capture-icon-wrapper">
+                            <ion-icon name="camera"></ion-icon>
+                        </div>
+                        <span class="capture-label">Take Photo</span>
+                        <span class="capture-hint">Use device camera</span>
+                    </button>
+                    <button id="btn-gallery" class="capture-card">
+                        <div class="capture-icon-wrapper">
+                            <ion-icon name="images"></ion-icon>
+                        </div>
+                        <span class="capture-label">Gallery</span>
+                        <span class="capture-hint">Choose existing</span>
+                    </button>
+                </div>
+
+                <!-- Image Preview -->
+                <div id="image-preview-container" class="preview-container hidden">
+                    <div class="preview-image-wrapper">
+                        <img id="image-preview" src="" alt="Bird photo preview">
+                        <button id="btn-clear-image" class="preview-clear-btn">
+                            <ion-icon name="close-circle"></ion-icon>
+                        </button>
+                    </div>
+                    <button id="btn-identify-image" class="identify-btn">
+                        <ion-icon name="scan-outline"></ion-icon>
+                        <span>Identify Bird</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- ====== AUDIO MODE ====== -->
+            <section id="audio-mode" class="mode-section">
+                <!-- Audio Capture Options -->
+                <div class="capture-grid">
+                    <button id="btn-record" class="capture-card primary-capture">
+                        <div class="capture-card-glow"></div>
+                        <div class="capture-icon-wrapper">
+                            <ion-icon name="mic"></ion-icon>
+                        </div>
+                        <span class="capture-label">Record</span>
+                        <span class="capture-hint">Capture bird call</span>
+                    </button>
+                    <button id="btn-audio-file" class="capture-card">
+                        <div class="capture-icon-wrapper">
+                            <ion-icon name="folder-open"></ion-icon>
+                        </div>
+                        <span class="capture-label">Browse</span>
+                        <span class="capture-hint">Pick audio file</span>
+                    </button>
+                </div>
+
+                <!-- Recording UI -->
+                <div id="recording-ui" class="recording-ui hidden">
+                    <div class="recording-visualizer">
+                        <div class="recording-pulse-ring pulse-1"></div>
+                        <div class="recording-pulse-ring pulse-2"></div>
+                        <div class="recording-pulse-ring pulse-3"></div>
+                        <div class="recording-mic-icon">
+                            <ion-icon name="mic"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="recording-timer" id="recording-timer">00:00</div>
+                    <div class="recording-waveform" id="recording-waveform"></div>
+                    <button id="btn-stop-record" class="stop-record-btn">
+                        <ion-icon name="stop-circle"></ion-icon>
+                        <span>Stop Recording</span>
+                    </button>
+                </div>
+
+                <!-- Audio Preview -->
+                <div id="audio-preview-container" class="preview-container hidden">
+                    <div class="audio-preview-card">
+                        <div class="audio-icon-wrapper">
+                            <ion-icon name="musical-notes"></ion-icon>
+                        </div>
+                        <div class="audio-meta">
+                            <span class="audio-filename" id="audio-filename">recording.wav</span>
+                            <span class="audio-duration" id="audio-duration">0:00</span>
+                        </div>
+                        <audio id="audio-player" controls></audio>
+                        <button id="btn-clear-audio" class="preview-clear-btn small">
+                            <ion-icon name="close-circle"></ion-icon>
+                        </button>
+                    </div>
+                    <button id="btn-identify-audio" class="identify-btn">
+                        <ion-icon name="scan-outline"></ion-icon>
+                        <span>Identify Bird Call</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- ====== RESULTS ====== -->
+            <section id="results-section" class="results-section hidden">
+                <div class="results-header">
+                    <h2>
+                        <ion-icon name="analytics-outline"></ion-icon>
+                        Recognition Results
+                    </h2>
+                    <button id="btn-new-scan" class="new-scan-btn">
+                        <ion-icon name="refresh-outline"></ion-icon>
+                        New Scan
+                    </button>
+                </div>
+
+                <!-- Loading State -->
+                <div id="loading-state" class="loading-state hidden">
+                    <div class="scanning-animation">
+                        <div class="scan-ring ring-1"></div>
+                        <div class="scan-ring ring-2"></div>
+                        <div class="scan-ring ring-3"></div>
+                        <div class="scan-center-icon">
+                            <ion-icon name="search-outline"></ion-icon>
+                        </div>
+                    </div>
+                    <p class="loading-text">Analyzing biological data<span class="loading-dots"></span></p>
+                </div>
+
+                <!-- Results List -->
+                <div id="predictions-list" class="predictions-list"></div>
+            </section>
+
+        </main>
+
+        <!-- Hidden file input for audio -->
+        <input type="file" id="audio-file-input" accept="audio/*" hidden>
+
+        <!-- Toast Container -->
+        <div id="toast-container" class="toast-container"></div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>

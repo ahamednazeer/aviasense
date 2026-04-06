@@ -1,0 +1,32 @@
+{
+  "name": "aviasense-mobile",
+  "version": "1.0.0",
+  "description": "AviaSense - AI Bird Species Recognition Mobile App",
+  "main": "index.js",
+  "scripts": {
+    "cap:sync": "npx cap sync android",
+    "cap:open": "npx cap open android",
+    "cap:run": "npx cap run android"
+  },
+  "keywords": [
+    "bird",
+    "classification",
+    "capacitor",
+    "android"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@capacitor/android": "^6.2.0",
+    "@capacitor/camera": "^6.1.0",
+    "@capacitor/cli": "^6.2.0",
+    "@capacitor/core": "^6.2.0",
+    "@capacitor/haptics": "^6.0.2",
+    "@capacitor/network": "^6.0.3",
+    "@capacitor/splash-screen": "^6.0.3",
+    "@capacitor/status-bar": "^6.0.2"
+  },
+  "devDependencies": {
+    "typescript": "^6.0.2"
+  }
+}

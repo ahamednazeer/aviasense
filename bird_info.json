@@ -1,0 +1,2200 @@
+{
+    "001.Black_footed_Albatross": {
+        "common_name": "Black-footed Albatross",
+        "scientific_name": "Phoebastria nigripes",
+        "habitat": "Open Ocean, North Pacific",
+        "conservation_status": "Near Threatened",
+        "description": "A small, dark albatross seen primarily in the North Pacific. It nests on remote islands and spends most of its life at sea."
+    },
+    "002.Laysan_Albatross": {
+        "common_name": "Laysan Albatross",
+        "scientific_name": "Phoebastria immutabilis",
+        "habitat": "Open Ocean, Nests on Islands",
+        "conservation_status": "Near Threatened",
+        "description": "A small albatross with a white head and body and dark upper wings. Known for its graceful flight and long lifespan."
+    },
+    "003.Sooty_Albatross": {
+        "common_name": "Sooty Albatross",
+        "scientific_name": "Phoebetria fusca",
+        "habitat": "South Atlantic and Indian Oceans",
+        "conservation_status": "Endangered",
+        "description": "A medium-sized albatross with sooty-brown plumage and a diamond-shaped tail. It breeds on sub-Antarctic islands."
+    },
+    "004.Groove_billed_Ani": {
+        "common_name": "Groove-billed Ani",
+        "scientific_name": "Crotophaga sulcirostris",
+        "habitat": "Open country, scrub, farmland",
+        "conservation_status": "Least Concern",
+        "description": "A tropical black bird in the cuckoo family, known for its large, grooved bill and communal breeding habits."
+    },
+    "005.Crested_Auklet": {
+        "common_name": "Crested Auklet",
+        "scientific_name": "Aethia cristatella",
+        "habitat": "Rocky coasts, Open Sea",
+        "conservation_status": "Least Concern",
+        "description": "A small seabird of the North Pacific, famous for its forward-curving crest and tangerine-scented plumage during breeding season."
+    },
+    "006.Least_Auklet": {
+        "common_name": "Least Auklet",
+        "scientific_name": "Aethia pusilla",
+        "habitat": "Bering Sea, rocky islands",
+        "conservation_status": "Least Concern",
+        "description": "The smallest species of auklet. They nest in large colonies in rocky crevices on islands in the Bering Sea."
+    },
+    "007.Parakeet_Auklet": {
+        "common_name": "Parakeet Auklet",
+        "scientific_name": "Aethia psittacula",
+        "habitat": "North Pacific cliffs and rocky slopes",
+        "conservation_status": "Least Concern",
+        "description": "A small seabird with a distinctive circular red bill. It nests in crevices on cliffs and slopes."
+    },
+    "008.Rhinoceros_Auklet": {
+        "common_name": "Rhinoceros Auklet",
+        "scientific_name": "Cerorhinca monocerata",
+        "habitat": "North Pacific Ocean, burrows on islands",
+        "conservation_status": "Least Concern",
+        "description": "Named for the horn-like extension on its bill during breeding season. A close relative of puffins, it nests in burrows."
+    },
+    "009.Brewer_Blackbird": {
+        "common_name": "Brewer's Blackbird",
+        "scientific_name": "Euphagus cyanocephalus",
+        "habitat": "Open habitats, urban areas",
+        "conservation_status": "Least Concern",
+        "description": "A medium-sized blackbird common in the West. Males are glossy black with a purple sheen on the head; females are brownish-grey."
+    },
+    "010.Red_winged_Blackbird": {
+        "common_name": "Red-winged Blackbird",
+        "scientific_name": "Agelaius phoeniceus",
+        "habitat": "Marshes, wetlands, fields",
+        "conservation_status": "Least Concern",
+        "description": "One of the most abundant birds across North America. Males are black with bright red and yellow shoulder patches."
+    },
+    "011.Rusty_Blackbird": {
+        "common_name": "Rusty Blackbird",
+        "scientific_name": "Euphagus carolinus",
+        "habitat": "Boreal forests, wooded swamps",
+        "conservation_status": "Vulnerable",
+        "description": "Breeds in the boreal forests of Canada and Alaska. Populations have declined steeply. Named for rusty edges on winter plumage."
+    },
+    "012.Yellow_headed_Blackbird": {
+        "common_name": "Yellow-headed Blackbird",
+        "scientific_name": "Xanthocephalus xanthocephalus",
+        "habitat": "Prairie wetlands, marshes",
+        "conservation_status": "Least Concern",
+        "description": "Males are striking with a bright yellow head and chest against a black body. They inhabit freshwater marshes in the West."
+    },
+    "013.Bobolink": {
+        "common_name": "Bobolink",
+        "scientific_name": "Dolichonyx oryzivorus",
+        "habitat": "Grasslands, hayfields",
+        "conservation_status": "Least Concern",
+        "description": "A bird of the grasslands, known for the male's bubbling song and 'tuxedo-backward' plumage pattern. Migrates long distances to South America."
+    },
+    "014.Indigo_Bunting": {
+        "common_name": "Indigo Bunting",
+        "scientific_name": "Passerina cyanea",
+        "habitat": "Brushy edges, open woodland",
+        "conservation_status": "Least Concern",
+        "description": "Males are a brilliant indigo blue all over. They frequent weedy fields and shrubby areas in the Eastern US."
+    },
+    "015.Lazuli_Bunting": {
+        "common_name": "Lazuli Bunting",
+        "scientific_name": "Passerina amoena",
+        "habitat": "Dry brushy areas, streamside thickets",
+        "conservation_status": "Least Concern",
+        "description": "The western counterpart to the Indigo Bunting. Males have a turquoise head/back, rusty breast, and white belly."
+    },
+    "016.Painted_Bunting": {
+        "common_name": "Painted Bunting",
+        "scientific_name": "Passerina ciris",
+        "habitat": "Thickets, brush, woodland edges",
+        "conservation_status": "Least Concern",
+        "description": "Males are arguably the most colorful bird in North America, with a blue head, red underparts, and green back."
+    },
+    "017.Cardinal": {
+        "common_name": "Northern Cardinal",
+        "scientific_name": "Cardinalis cardinalis",
+        "habitat": "Woodlands, gardens, shrublands",
+        "conservation_status": "Least Concern",
+        "description": "A familiar backyard bird. Males are brilliant red with a black mask and crest; females are brownish with red accents."
+    },
+    "018.Spotted_Catbird": {
+        "common_name": "Spotted Catbird",
+        "scientific_name": "Ailuroedus maculosus",
+        "habitat": "Rainforests (Note: Primarily Australia/NG)",
+        "conservation_status": "Least Concern",
+        "description": "A bowerbird species with emerald green plumage and white spotting. Known for its unique cat-like wailing calls."
+    },
+    "019.Gray_Catbird": {
+        "common_name": "Gray Catbird",
+        "scientific_name": "Dumetella carolinensis",
+        "habitat": "Dense shrubs, thickets",
+        "conservation_status": "Least Concern",
+        "description": "A slate-gray bird with a black cap and chestnut undertail. Famous for its meowing call and mimicry abilities."
+    },
+    "020.Yellow_breasted_Chat": {
+        "common_name": "Yellow-breasted Chat",
+        "scientific_name": "Icteria virens",
+        "habitat": "Dense thickets, scrub",
+        "conservation_status": "Least Concern",
+        "description": "A large, elusive bird with a bright yellow breast and spectacles. Known for its bizarre series of clicks, whistles, and hoots."
+    },
+    "021.Eastern_Towhee": {
+        "common_name": "Eastern Towhee",
+        "scientific_name": "Pipilo erythrophthalmus",
+        "habitat": "Brushy areas, forest edges",
+        "conservation_status": "Least Concern",
+        "description": "A large sparrow of the Eastern scrub. Males are black, white, and rust-colored. Known for their 'drink-your-tea' song."
+    },
+    "022.Chuck_will_Widow": {
+        "common_name": "Chuck-will's-widow",
+        "scientific_name": "Antrostomus carolinensis",
+        "habitat": "Open woodlands, pine-oak forests",
+        "conservation_status": "Near Threatened",
+        "description": "The largest nightjar in North America. Camouflaged like dead leaves, it hunts insects at night and is named after its call."
+    },
+    "023.Brandt_Cormorant": {
+        "common_name": "Brandt's Cormorant",
+        "scientific_name": "Urile penicillatus",
+        "habitat": "Marine coasts, Pacific Ocean",
+        "conservation_status": "Least Concern",
+        "description": "A seabird of the Pacific coast. Breeding adults have a bright blue throat pouch. They dive deep for fish."
+    },
+    "024.Red_faced_Cormorant": {
+        "common_name": "Red-faced Cormorant",
+        "scientific_name": "Urile urile",
+        "habitat": "Rocky coasts, cliffs (Alaska/Russia)",
+        "conservation_status": "Least Concern",
+        "description": "Range restricted to the North Pacific. Named for the bare red skin on its face. Nests on steep cliffs."
+    },
+    "025.Pelagic_Cormorant": {
+        "common_name": "Pelagic Cormorant",
+        "scientific_name": "Urile pelagicus",
+        "habitat": "Coasts, rocky islands",
+        "conservation_status": "Least Concern",
+        "description": "Small and slender cormorant. Despite its name, it stays close to rocky shores. Glossy black with white flank patches in breeding season."
+    },
+    "026.Bronzed_Cowbird": {
+        "common_name": "Bronzed Cowbird",
+        "scientific_name": "Molothrus aeneus",
+        "habitat": "Open country, farmlands, feedlots",
+        "conservation_status": "Least Concern",
+        "description": "A brood parasite that lays eggs in other birds' nests. Males have a red eye and a glossy, bronzed ruff on the neck."
+    },
+    "027.Shiny_Cowbird": {
+        "common_name": "Shiny Cowbird",
+        "scientific_name": "Molothrus bonariensis",
+        "habitat": "Open areas, agricultural land",
+        "conservation_status": "Least Concern",
+        "description": "A recent arrival to North America from the south. Males are glossy violet-black; females are plain brown. Brood parasite."
+    },
+    "028.Brown_Creeper": {
+        "common_name": "Brown Creeper",
+        "scientific_name": "Certhia americana",
+        "habitat": "Mature forests",
+        "conservation_status": "Least Concern",
+        "description": "A tiny woodland bird that spirals up tree trunks searching for insects. Cryptically patterned to match tree bark."
+    },
+    "029.American_Crow": {
+        "common_name": "American Crow",
+        "scientific_name": "Corvus brachyrhynchos",
+        "habitat": "Widespread (urban, rural, forests)",
+        "conservation_status": "Least Concern",
+        "description": "A large, intelligent all-black bird. Highly social and adaptable, found in nearly every habitat across North America."
+    },
+    "030.Fish_Crow": {
+        "common_name": "Fish Crow",
+        "scientific_name": "Corvus ossifragus",
+        "habitat": "Coastal marshes, beaches, river valleys",
+        "conservation_status": "Least Concern",
+        "description": "Similar to American Crow but smaller and with a nasal call. Primarily found along the East and Gulf Coasts."
+    },
+    "031.Black_billed_Cuckoo": {
+        "common_name": "Black-billed Cuckoo",
+        "scientific_name": "Coccyzus erythropthalmus",
+        "habitat": "Woodlands, thickets",
+        "conservation_status": "Least Concern",
+        "description": "Slender and secretive bird. Unlike European cuckoos, they usually raise their own young. Voracious eaters of caterpillars."
+    },
+    "032.Mangrove_Cuckoo": {
+        "common_name": "Mangrove Cuckoo",
+        "scientific_name": "Coccyzus minor",
+        "habitat": "Mangrove swamps, tropical hardwoods",
+        "conservation_status": "Least Concern",
+        "description": "A shy bird of Florida's mangroves. distinguished by its buffy underparts and black mask."
+    },
+    "033.Yellow_billed_Cuckoo": {
+        "common_name": "Yellow-billed Cuckoo",
+        "scientific_name": "Coccyzus americanus",
+        "habitat": "Deciduous woodlands, riverside forests",
+        "conservation_status": "Least Concern",
+        "description": "Known as the 'Rain Crow' for its calling before storms. Identify by the yellow lower bill and large white tail spots."
+    },
+    "034.Gray_crowned_Rosy_Finch": {
+        "common_name": "Gray-crowned Rosy-Finch",
+        "scientific_name": "Leucosticte tephrocotis",
+        "habitat": "Alpine tundra, rocky snowfields",
+        "conservation_status": "Least Concern",
+        "description": "A rugged finch of high mountains and islands. Brown body with pink on wings/belly and a gray head patch."
+    },
+    "035.Purple_Finch": {
+        "common_name": "Purple Finch",
+        "scientific_name": "Haemorhous purpureus",
+        "habitat": "Coniferous and mixed forests",
+        "conservation_status": "Least Concern",
+        "description": "Males are raspberry red (described as dipped in cranberry juice). A chunky forest finch with a heavy beak."
+    },
+    "036.Northern_Flicker": {
+        "common_name": "Northern Flicker",
+        "scientific_name": "Colaptes auratus",
+        "habitat": "Open woodlands, forest edges",
+        "conservation_status": "Least Concern",
+        "description": "A large, brownish woodpecker that often feeds on the ground (ants). Flashy yellow or red underwings in flight."
+    },
+    "037.Acadian_Flycatcher": {
+        "common_name": "Acadian Flycatcher",
+        "scientific_name": "Empidonax virescens",
+        "habitat": "Deciduous forests, near water",
+        "conservation_status": "Least Concern",
+        "description": "A greenish 'empu' flycatcher of the Eastern forests. Best identified by its explosive 'PEET-sah' song."
+    },
+    "038.Great_Crested_Flycatcher": {
+        "common_name": "Great Crested Flycatcher",
+        "scientific_name": "Myiarchus crinitus",
+        "habitat": "Woodlands, groves",
+        "conservation_status": "Least Concern",
+        "description": "A large flycatcher with a yellow belly and cinnamon tail. Nests in cavities and often uses snakeskin in nests."
+    },
+    "039.Least_Flycatcher": {
+        "common_name": "Least Flycatcher",
+        "scientific_name": "Empidonax minimus",
+        "habitat": "Open woods, orchards",
+        "conservation_status": "Least Concern",
+        "description": "One of the smallest flycatchers. Identified by its dry 'che-beck' call. Common in open deciduous forests."
+    },
+    "040.Olive_sided_Flycatcher": {
+        "common_name": "Olive-sided Flycatcher",
+        "scientific_name": "Contopus cooperi",
+        "habitat": "Coniferous forests, bog edges",
+        "conservation_status": "Near Threatened",
+        "description": "Perches on high, dead branches. Dark 'vest' appearance. Distinctive song sounds like 'Quick, three beers!'."
+    },
+    "041.Scissor_tailed_Flycatcher": {
+        "common_name": "Scissor-tailed Flycatcher",
+        "scientific_name": "Tyrannus forficatus",
+        "habitat": "Open prairies, savannas (South Central US)",
+        "conservation_status": "Least Concern",
+        "description": "Unmistakable with its extremely long, forked tail. It perches on fences and wires, catching insects in midair."
+    },
+    "042.Vermilion_Flycatcher": {
+        "common_name": "Vermilion Flycatcher",
+        "scientific_name": "Pyrocephalus rubinus",
+        "habitat": "Open riparian areas, desert scrub",
+        "conservation_status": "Least Concern",
+        "description": "Males are a brilliant, eye-catching red with a dark mask. They are often seen flycatching from low perches."
+    },
+    "043.Yellow_bellied_Flycatcher": {
+        "common_name": "Yellow-bellied Flycatcher",
+        "scientific_name": "Empidonax flaviventris",
+        "habitat": "Boreal peatlands, bogs",
+        "conservation_status": "Least Concern",
+        "description": "A small, active flycatcher of the northern bogs. Yellowish underparts and throat. Hard to see in dense vegetation."
+    },
+    "044.Frigatebird": {
+        "common_name": "Magnificent Frigatebird",
+        "scientific_name": "Fregata magnificens",
+        "habitat": "Tropical oceans, coasts",
+        "conservation_status": "Least Concern",
+        "description": "A large seabird with a long forked tail and angular wings. Males have a red throat pouch they inflate to attract mates."
+    },
+    "045.Northern_Fulmar": {
+        "common_name": "Northern Fulmar",
+        "scientific_name": "Fulmarus glacialis",
+        "habitat": "Open North Atlantic and North Pacific",
+        "conservation_status": "Least Concern",
+        "description": "Looks like a gull but is related to petrels (has a tube nose). Common in cold northern oceans, often following ships."
+    },
+    "046.Gadwall": {
+        "common_name": "Gadwall",
+        "scientific_name": "Mareca strepera",
+        "habitat": "Wetlands, ponds, marshes",
+        "conservation_status": "Least Concern",
+        "description": "A subtly patterned duck. Males are gray-brown with a black rear end. Often overlooked among mallards."
+    },
+    "047.American_Goldfinch": {
+        "common_name": "American Goldfinch",
+        "scientific_name": "Spinus tristis",
+        "habitat": "Weedy fields, floodplains, backyards",
+        "conservation_status": "Least Concern",
+        "description": "The bright yellow 'wild canary'. Males are yellow with black cap/wings. They love thistle seeds."
+    },
+    "048.European_Goldfinch": {
+        "common_name": "European Goldfinch",
+        "scientific_name": "Carduelis carduelis",
+        "habitat": "Introduced (parts of US/Canada)",
+        "conservation_status": "Least Concern",
+        "description": "Distinctive red face and black/white head pattern. Golden wing bars are visible in flight."
+    },
+    "049.Boat_tailed_Grackle": {
+        "common_name": "Boat-tailed Grackle",
+        "scientific_name": "Quiscalus major",
+        "habitat": "Coastal salt marshes (SE US)",
+        "conservation_status": "Least Concern",
+        "description": "A large, lanky blackbird with a long, keel-shaped tail. Males are glossy black; females are brown."
+    },
+    "050.Eared_Grebe": {
+        "common_name": "Eared Grebe",
+        "scientific_name": "Podiceps nigricollis",
+        "habitat": "Shallow lakes, wetlands",
+        "conservation_status": "Least Concern",
+        "description": "Small grebe with golden ear tufts in breeding plumage. Nests in colonies on floating vegetation."
+    },
+    "051.Horned_Grebe": {
+        "common_name": "Horned Grebe",
+        "scientific_name": "Podiceps auritus",
+        "habitat": "Lakes, ponds (breeding); Coasts (winter)",
+        "conservation_status": "Vulnerable",
+        "description": "Striking breeding plumage with golden 'horns' behind the eyes. Winter plumage is stark black and white."
+    },
+    "052.Pied_billed_Grebe": {
+        "common_name": "Pied-billed Grebe",
+        "scientific_name": "Podilymbus podiceps",
+        "habitat": "Freshwater wetlands, ponds",
+        "conservation_status": "Least Concern",
+        "description": "Small, brownish grebe with a thick, chicken-like bill. Expert at sinking slowly into the water to hide."
+    },
+    "053.Western_Grebe": {
+        "common_name": "Western Grebe",
+        "scientific_name": "Aechmophorus occidentalis",
+        "habitat": "Large lakes, coastal bays",
+        "conservation_status": "Least Concern",
+        "description": "Elegant, long-necked grebe with black and white plumage. Famous for their 'rushing' courtship ceremony across water."
+    },
+    "054.Blue_Grosbeak": {
+        "common_name": "Blue Grosbeak",
+        "scientific_name": "Passerina caerulea",
+        "habitat": "Brushy fields, hedgerows (Southern US)",
+        "conservation_status": "Least Concern",
+        "description": "Large, deep blue bird with chestnut wing bars and a heavy silver bill. Often flicks its tail sideways."
+    },
+    "055.Evening_Grosbeak": {
+        "common_name": "Evening Grosbeak",
+        "scientific_name": "Coccothraustes vespertinus",
+        "habitat": "Coniferous forests",
+        "conservation_status": "Vulnerable",
+        "description": "A bulky finch with a massive bill. Males are yellow, black, and white. Their populations are irruptive and declining."
+    },
+    "056.Pine_Grosbeak": {
+        "common_name": "Pine Grosbeak",
+        "scientific_name": "Pinicola enucleator",
+        "habitat": "Boreal forests (Spruce/Fir)",
+        "conservation_status": "Least Concern",
+        "description": "Large, sluggish finch. Males are pinkish-red; females are gray with yellow head/rump. Tame and approachable."
+    },
+    "057.Rose_breasted_Grosbeak": {
+        "common_name": "Rose-breasted Grosbeak",
+        "scientific_name": "Pheucticus ludovicianus",
+        "habitat": "Deciduous forests, edges",
+        "conservation_status": "Least Concern",
+        "description": "Males are black and white with a brilliant red triangle on the breast. Known for their lovely, robin-like song."
+    },
+    "058.Pigeon_Guillemot": {
+        "common_name": "Pigeon Guillemot",
+        "scientific_name": "Cepphus columba",
+        "habitat": "Rocky coasts (Pacific)",
+        "conservation_status": "Least Concern",
+        "description": "A dark seabird with a white wing patch and bright red legs/mouth. Nests in rocky crevices near the water."
+    },
+    "059.California_Gull": {
+        "common_name": "California Gull",
+        "scientific_name": "Larus californicus",
+        "habitat": "Lakes, coasts, agricultural land",
+        "conservation_status": "Least Concern",
+        "description": "The gull that saved the Mormon crops from crickets. Medium-sized with dark eyes and yellow legs."
+    },
+    "060.Glaucous_winged_Gull": {
+        "common_name": "Glaucous-winged Gull",
+        "scientific_name": "Larus glaucescens",
+        "habitat": "Marine coasts (North Pacific)",
+        "conservation_status": "Least Concern",
+        "description": "A large, pale-gray gull. The wingtips are the same color as the mantle (gray), not black."
+    },
+    "061.Heermann_Gull": {
+        "common_name": "Heermann's Gull",
+        "scientific_name": "Larus heermanni",
+        "habitat": "Coastal beaches, rocky islands",
+        "conservation_status": "Near Threatened",
+        "description": "Distinctive gull of the California coast with a gray body, black tail, and red bill. Often harasses pelicans for food."
+    },
+    "062.Herring_Gull": {
+        "common_name": "Herring Gull",
+        "scientific_name": "Larus argentatus",
+        "habitat": "Coasts, lakes, landfills",
+        "conservation_status": "Least Concern",
+        "description": "The quintessential 'seagull'. Large, with pink legs and a red spot on the lower mandible. Widespread and adaptable."
+    },
+    "063.Ivory_Gull": {
+        "common_name": "Ivory Gull",
+        "scientific_name": "Pagophila eburnea",
+        "habitat": "High Arctic pack ice",
+        "conservation_status": "Near Threatened",
+        "description": "A pure white gull of the high Arctic. It follows polar bears to scavenge on seal kills."
+    },
+    "064.Ring_billed_Gull": {
+        "common_name": "Ring-billed Gull",
+        "scientific_name": "Larus delawarensis",
+        "habitat": "Lakes, parking lots, coasts",
+        "conservation_status": "Least Concern",
+        "description": "A medium-sized gull with a yellow bill encircled by a black ring. Very common inland and often near people."
+    },
+    "065.Slaty_backed_Gull": {
+        "common_name": "Slaty-backed Gull",
+        "scientific_name": "Larus schistisagus",
+        "habitat": "Coasts (North Pacific)",
+        "conservation_status": "Least Concern",
+        "description": "A large, dark-backed gull from Asia that occasionally visits Alaska and the West Coast."
+    },
+    "066.Western_Gull": {
+        "common_name": "Western Gull",
+        "scientific_name": "Larus occidentalis",
+        "habitat": "West Coast beaches, piers",
+        "conservation_status": "Least Concern",
+        "description": "A large, bulky gull with a dark gray back and pink legs. The most common coastal gull in California."
+    },
+    "067.Anna_Hummingbird": {
+        "common_name": "Anna's Hummingbird",
+        "scientific_name": "Calypte anna",
+        "habitat": "Gardens, coastal scrub",
+        "conservation_status": "Least Concern",
+        "description": "Males have a glossy red-pink head and throat that can look black in low light. Common year-round on the West Coast."
+    },
+    "068.Ruby_throated_Hummingbird": {
+        "common_name": "Ruby-throated Hummingbird",
+        "scientific_name": "Archilochus colubris",
+        "habitat": "Gardens, woodland edges (Eastern US)",
+        "conservation_status": "Least Concern",
+        "description": "The only breeding hummingbird in eastern North America. Males have a brilliant ruby-red throat gorget."
+    },
+    "069.Rufous_Hummingbird": {
+        "common_name": "Rufous Hummingbird",
+        "scientific_name": "Selasphorus rufus",
+        "habitat": "Forest edges, mountain meadows",
+        "conservation_status": "Near Threatened",
+        "description": "A feisty, copper-colored hummingbird. Notorious for aggressively defending flower territories during migration."
+    },
+    "070.Green_Violetear": {
+        "common_name": "Mexican Violetear",
+        "scientific_name": "Colibri thalassinus",
+        "habitat": "Tropical montane forests",
+        "conservation_status": "Least Concern",
+        "description": "A large, dark green hummingbird with violet ear-patches and a blue-green tail. A rare stray to the US."
+    },
+    "071.Long_tailed_Jaeger": {
+        "common_name": "Long-tailed Jaeger",
+        "scientific_name": "Stercorarius longicaudus",
+        "habitat": "Arctic tundra (breeding), open ocean",
+        "conservation_status": "Least Concern",
+        "description": "Smallest of the jaegers. Breeding adults have exceedingly long central tail streamers. They prey on lemmings."
+    },
+    "072.Pomarine_Jaeger": {
+        "common_name": "Pomarine Jaeger",
+        "scientific_name": "Stercorarius pomarinus",
+        "habitat": "Arctic tundra, open ocean",
+        "conservation_status": "Least Concern",
+        "description": "Large and powerfully built jaeger. Central tail feathers are twisted and spoon-shaped. Kleptoparasite of other seabirds."
+    },
+    "073.Blue_Jay": {
+        "common_name": "Blue Jay",
+        "scientific_name": "Cyanocitta cristata",
+        "habitat": "Forests, diverse woodlands, towns",
+        "conservation_status": "Least Concern",
+        "description": "Loud and colorful bird of eastern backyards. Blue, white, and black plumage with a crest. Known to mimic hawks."
+    },
+    "074.Florida_Jay": {
+        "common_name": "Florida Scrub-Jay",
+        "scientific_name": "Aphelocoma coerulescens",
+        "habitat": "Florida scrub oak",
+        "conservation_status": "Vulnerable",
+        "description": "Found only in Florida. Blue and gray without a crest. They live in cooperative family groups."
+    },
+    "075.Green_Jay": {
+        "common_name": "Green Jay",
+        "scientific_name": "Cyanocorax yncas",
+        "habitat": "Tropical woodlands (Rio Grande Valley)",
+        "conservation_status": "Least Concern",
+        "description": "Unmistakable tropical jay with a green back, yellow underparts, and blue head. Noisy and social."
+    },
+    "076.Dark_eyed_Junco": {
+        "common_name": "Dark-eyed Junco",
+        "scientific_name": "Junco hyemails",
+        "habitat": "Coniferous forests, ground feeder",
+        "conservation_status": "Least Concern",
+        "description": "Common 'snowbirds'. Slate-gray with white outer tail feathers that flash in flight. Ground feeders."
+    },
+    "077.Tropical_Kingbird": {
+        "common_name": "Tropical Kingbird",
+        "scientific_name": "Tyrannus melancholicus",
+        "habitat": "Open areas, wires, trees",
+        "conservation_status": "Least Concern",
+        "description": "A large tyrant flycatcher with a gray head and yellow belly. Very vocal and aggressive towards intruders."
+    },
+    "078.Gray_Kingbird": {
+        "common_name": "Gray Kingbird",
+        "scientific_name": "Tyrannus dominicensis",
+        "habitat": "Coastal mangroves, towns (Florida)",
+        "conservation_status": "Least Concern",
+        "description": "A massive-billed flycatcher of the Caribbean and Florida. Pale gray above, white below. Perches on wires."
+    },
+    "079.Belted_Kingfisher": {
+        "common_name": "Belted Kingfisher",
+        "scientific_name": "Megaceryle alcyon",
+        "habitat": "Streams, lakes, coasts",
+        "conservation_status": "Least Concern",
+        "description": "Stocky bird with a shaggy crest. Plunges headfirst into water to catch fish. Females have a rusty belly band."
+    },
+    "080.Green_Kingfisher": {
+        "common_name": "Green Kingfisher",
+        "scientific_name": "Chloroceryle americana",
+        "habitat": "Streams, rivers (Texas/Arizona)",
+        "conservation_status": "Least Concern",
+        "description": "Tiny kingfisher of the southern border. Dark green upperparts and white collar. Low, fast flight over water."
+    },
+    "081.Pied_Kingfisher": {
+        "common_name": "Pied Kingfisher",
+        "scientific_name": "Ceryle rudis",
+        "habitat": "Freshwater/Coastal (Africa/Asia)",
+        "conservation_status": "Least Concern",
+        "description": "Black and white kingfisher known for its ability to hover over water before diving. Not native to Americas."
+    },
+    "082.Ringed_Kingfisher": {
+        "common_name": "Ringed Kingfisher",
+        "scientific_name": "Megaceryle torquata",
+        "habitat": "Rivers, ponds (Texas/Latin America)",
+        "conservation_status": "Least Concern",
+        "description": "Largest kingfisher in the New World. Blue-gray above with a rich chestnut belly. Noisy rattling call."
+    },
+    "083.White_breasted_Kingfisher": {
+        "common_name": "White-throated Kingfisher",
+        "scientific_name": "Halcyon smyrnensis",
+        "habitat": "Varied, often away from water (Asia)",
+        "conservation_status": "Least Concern",
+        "description": "Large kingfisher with huge red bill and chocolate-brown head. Hunts small animals on land as well as fish."
+    },
+    "084.Red_legged_Kittiwake": {
+        "common_name": "Red-legged Kittiwake",
+        "scientific_name": "Rissa brevirostris",
+        "habitat": "Bering Sea cliffs",
+        "conservation_status": "Vulnerable",
+        "description": "Small gull with bright red legs and a short bill. Nests on ledges in the Pribilof Islands."
+    },
+    "085.Horned_Lark": {
+        "common_name": "Horned Lark",
+        "scientific_name": "Eremophila alpestris",
+        "habitat": "Open fields, tundra, airports",
+        "conservation_status": "Least Concern",
+        "description": "Ground-dwelling bird of open lands. Males have black 'horns' (feather tufts) and a yellow/black face mask."
+    },
+    "086.Pacific_Loon": {
+        "common_name": "Pacific Loon",
+        "scientific_name": "Gavia pacifica",
+        "habitat": "Tundra lakes (summer), Coasts (winter)",
+        "conservation_status": "Least Concern",
+        "description": "Elegant diver with a gray head and black throat patch in summer. Requires open water for takeoff."
+    },
+    "087.Mallard": {
+        "common_name": "Mallard",
+        "scientific_name": "Anas platyrhynchos",
+        "habitat": "Wetlands, parks, ponds everywhere",
+        "conservation_status": "Least Concern",
+        "description": "The most familiar duck. Males have an iridescent green head; females are mottled brown."
+    },
+    "088.Western_Meadowlark": {
+        "common_name": "Western Meadowlark",
+        "scientific_name": "Sturnella neglecta",
+        "habitat": "Grasslands, prairies, fields",
+        "conservation_status": "Least Concern",
+        "description": "A bird of the open West with a bright yellow breast and black V. Melodious, flute-like song."
+    },
+    "089.Hooded_Merganser": {
+        "common_name": "Hooded Merganser",
+        "scientific_name": "Lophodytes cucullatus",
+        "habitat": "Wooded ponds, swamps",
+        "conservation_status": "Least Concern",
+        "description": "Small duck with a fan-shaped crest. Males have a striking black and white head pattern. Nests in tree cavities."
+    },
+    "090.Red_breasted_Merganser": {
+        "common_name": "Red-breasted Merganser",
+        "scientific_name": "Mergus serrator",
+        "habitat": "Coasts, large lakes",
+        "conservation_status": "Least Concern",
+        "description": "Shaggy-crested diving duck with a long, thin, serrated bill for catching fish. Winters on salt water."
+    },
+    "091.Mockingbird": {
+        "common_name": "Northern Mockingbird",
+        "scientific_name": "Mimus polyglottos",
+        "habitat": "Towns, suburbs, scrub",
+        "conservation_status": "Least Concern",
+        "description": "Famous songster that mimics other birds, alarms, and sounds. Gray with white wing patches flashing in flight."
+    },
+    "092.Nighthawk": {
+        "common_name": "Common Nighthawk",
+        "scientific_name": "Chordeiles minor",
+        "habitat": "Open country, urban rooftops",
+        "conservation_status": "Least Concern",
+        "description": "Active at dawn/dusk. Flies erratically to catch insects. distinctive white bar across long, pointed wings."
+    },
+    "093.Clark_Nutcracker": {
+        "common_name": "Clark's Nutcracker",
+        "scientific_name": "Nucifraga columbiana",
+        "habitat": "High mountain coniferous forests",
+        "conservation_status": "Least Concern",
+        "description": "A gray bird of the Rockies. Famous for burying thousands of pine seeds and remembering where they are."
+    },
+    "094.White_breasted_Nuthatch": {
+        "common_name": "White-breasted Nuthatch",
+        "scientific_name": "Sitta carolinensis",
+        "habitat": "Deciduous forests",
+        "conservation_status": "Least Concern",
+        "description": "Active bird that climbs down tree trunks headfirst. Blue-gray back, white face, and black cap."
+    },
+    "095.Baltimore_Oriole": {
+        "common_name": "Baltimore Oriole",
+        "scientific_name": "Icterus galbula",
+        "habitat": "Open woods, elms, orchards",
+        "conservation_status": "Least Concern",
+        "description": "Males are flame-orange and black. They weave hanging bag-like nests, often in elm trees."
+    },
+    "096.Hooded_Oriole": {
+        "common_name": "Hooded Oriole",
+        "scientific_name": "Icterus cucullatus",
+        "habitat": "Palms, open woods (Southwest)",
+        "conservation_status": "Least Concern",
+        "description": "A brilliant yellow-orange oriole. Often associated with palm trees, where they hang their nests from fronds."
+    },
+    "097.Orchard_Oriole": {
+        "common_name": "Orchard Oriole",
+        "scientific_name": "Icterus spurius",
+        "habitat": "Orchards, riverside thickets",
+        "conservation_status": "Least Concern",
+        "description": "The smallest North American oriole. Males are a deep chestnut-brick color (not orange) with black."
+    },
+    "098.Scott_Oriole": {
+        "common_name": "Scott's Oriole",
+        "scientific_name": "Icterus parisorum",
+        "habitat": "Desert mountains, yuccas",
+        "conservation_status": "Least Concern",
+        "description": "A Lemon-yellow and black oriole of the desert Southwest. Often associated with yucca plants."
+    },
+    "099.Ovenbird": {
+        "common_name": "Ovenbird",
+        "scientific_name": "Seiurus aurocapilla",
+        "habitat": "Mature deciduous forests",
+        "conservation_status": "Least Concern",
+        "description": "A ground-walking warbler. Olive-green above, spotted below. Named for its covered nest resembling a dutch oven."
+    },
+    "100.Brown_Pelican": {
+        "common_name": "Brown Pelican",
+        "scientific_name": "Pelecanus occidentalis",
+        "habitat": "Coastal beaches, ocean",
+        "conservation_status": "Least Concern",
+        "description": "Large seabird that plunge-dives for fish. Iconic pouch for scooping up water and prey."
+    },
+    "101.White_Pelican": {
+        "common_name": "American White Pelican",
+        "scientific_name": "Pelecanus erythrorhynchos",
+        "habitat": "Inland lakes, coastal lagoons",
+        "conservation_status": "Least Concern",
+        "description": "A huge white bird with black wingtips. Unlike brown pelicans, they scoop fish while swimming, often in coordinated groups."
+    },
+    "102.Western_Wood_Pewee": {
+        "common_name": "Western Wood-Pewee",
+        "scientific_name": "Contopus sordidulus",
+        "habitat": "Open woodlands, forest edges",
+        "conservation_status": "Least Concern",
+        "description": "A nondescript gray flycatcher. Best identified by its harsh, buzzing 'pee-ear' song. Sits upright on dead branches."
+    },
+    "103.Sayornis": {
+        "common_name": "Say's Phoebe",
+        "scientific_name": "Sayornis saya",
+        "habitat": "Open arid country, deserts, canyons",
+        "conservation_status": "Least Concern",
+        "description": "A flycatcher of the open West. Gray-brown back with a salmon-colored belly. Often nests on buildings."
+    },
+    "104.American_Pipit": {
+        "common_name": "American Pipit",
+        "scientific_name": "Anthus rubescens",
+        "habitat": "Tundra (breeding), fields (winter)",
+        "conservation_status": "Least Concern",
+        "description": "Sparrow-sized ground bird that bobs its tail constantly. Slender bill and white outer tail feathers."
+    },
+    "105.Whip_poor_Will": {
+        "common_name": "Eastern Whip-poor-will",
+        "scientific_name": "Antrostomus vociferus",
+        "habitat": "Deciduous or mixed forests",
+        "conservation_status": "Near Threatened",
+        "description": "Camouflaged night bird heard far more often than seen. Chants its name 'whip-poor-will' endlessly on summer nights."
+    },
+    "106.Horned_Puffin": {
+        "common_name": "Horned Puffin",
+        "scientific_name": "Fratercula corniculata",
+        "habitat": "North Pacific cliffs and oceans",
+        "conservation_status": "Least Concern",
+        "description": "Sea parrot with a massive yellow and red bill. Named for the fleshy 'horn' above the eye during breeding season."
+    },
+    "107.Common_Raven": {
+        "common_name": "Common Raven",
+        "scientific_name": "Corvus corax",
+        "habitat": "Extremely varied (mountains, deserts, forests)",
+        "conservation_status": "Least Concern",
+        "description": "The largest songbird. Massive size, shaggy throat feathers, and wedge-shaped tail distinguish it from crows."
+    },
+    "108.White_necked_Raven": {
+        "common_name": "Chihuahuan Raven",
+        "scientific_name": "Corvus cryptoleucus",
+        "habitat": "Deserts, arid grasslands (SW US/Mexico)",
+        "conservation_status": "Least Concern",
+        "description": "Similar to Common Raven but smaller. The white neck feathers are usually hidden except in strong wind or display."
+    },
+    "109.American_Redstart": {
+        "common_name": "American Redstart",
+        "scientific_name": "Setophaga ruticilla",
+        "habitat": "Deciduous forests",
+        "conservation_status": "Least Concern",
+        "description": "A warbler that acts like a flycatcher. Males are black with bright orange patches on wings and tail, which they flash."
+    },
+    "110.Geococcyx": {
+        "common_name": "Greater Roadrunner",
+        "scientific_name": "Geococcyx californianus",
+        "habitat": "Deserts, brushy country",
+        "conservation_status": "Least Concern",
+        "description": "A large, terrestrial cuckoo famous for running down prey (lizards, snakes). Can run up to 20 mph."
+    },
+    "111.Loggerhead_Shrike": {
+        "common_name": "Loggerhead Shrike",
+        "scientific_name": "Lanius ludovicianus",
+        "habitat": "Open country with wires/fences",
+        "conservation_status": "Near Threatened",
+        "description": "The 'Butcherbird'. A songbird with raptor habits, it impales prey (insects, small birds) on thorns or barbed wire."
+    },
+    "112.Great_Grey_Shrike": {
+        "common_name": "Northern Shrike",
+        "scientific_name": "Lanius borealis",
+        "habitat": "Tundra (breeding), open country (winter)",
+        "conservation_status": "Least Concern",
+        "description": "Slightly larger than Loggerhead Shrike. Winters in the northern US. Pale gray with a black mask."
+    },
+    "113.Baird_Sparrow": {
+        "common_name": "Baird's Sparrow",
+        "scientific_name": "Centronyx bairdii",
+        "habitat": "Native prairies, grasslands",
+        "conservation_status": "Vulnerable",
+        "description": "A secretive grassland sparrow. Declining due to habitat loss. best identified by its ochre face and necklace of streaks."
+    },
+    "114.Black_throated_Sparrow": {
+        "common_name": "Black-throated Sparrow",
+        "scientific_name": "Amphispiza bilineata",
+        "habitat": "Deserts, arid scrub",
+        "conservation_status": "Least Concern",
+        "description": "Striking sparrow of the desert. Gray with a bold black throat and white face stripes."
+    },
+    "115.Brewer_Sparrow": {
+        "common_name": "Brewer's Sparrow",
+        "scientific_name": "Spizella breweri",
+        "habitat": "Sagebrush flats",
+        "conservation_status": "Least Concern",
+        "description": "The 'sagebrush sparrow'. Small, sandy-gray sparrow. Its song is a long series of buzzes and trills."
+    },
+    "116.Chipping_Sparrow": {
+        "common_name": "Chipping Sparrow",
+        "scientific_name": "Spizella passerina",
+        "habitat": "Open woodlands, suburbs, lawns",
+        "conservation_status": "Least Concern",
+        "description": "Common and tame. Bright rufous cap in summer with a black eye-line. Song is a mechanical dry trill."
+    },
+    "117.Clay_colored_Sparrow": {
+        "common_name": "Clay-colored Sparrow",
+        "scientific_name": "Spizella pallida",
+        "habitat": "Shrubby grasslands, prairies",
+        "conservation_status": "Least Concern",
+        "description": "Pale sparrow with a buffy collar and distinct ear patch. Song is a rhythmic series of insect-like buzzes."
+    },
+    "118.House_Sparrow": {
+        "common_name": "House Sparrow",
+        "scientific_name": "Passer domesticus",
+        "habitat": "Cities, farms, suburbs (Introduced)",
+        "conservation_status": "Least Concern",
+        "description": "Ubiquitous city bird. Not a true sparrow (weaver finch). Males have a black bib; females are plain brown."
+    },
+    "119.Field_Sparrow": {
+        "common_name": "Field Sparrow",
+        "scientific_name": "Spizella pusilla",
+        "habitat": "Overgrown fields, scrub",
+        "conservation_status": "Least Concern",
+        "description": "Small sparrow with a pink bill and sweet expression. Song sounds like a ping-pong ball coming to rest."
+    },
+    "120.Fox_Sparrow": {
+        "common_name": "Fox Sparrow",
+        "scientific_name": "Passerella iliaca",
+        "habitat": "Thickets, forest undergrowth",
+        "conservation_status": "Least Concern",
+        "description": "Large, chunky sparrow. Scratch at leaf litter with both feet like a towhee. Plumage varies from red to gray."
+    },
+    "121.Grasshopper_Sparrow": {
+        "common_name": "Grasshopper Sparrow",
+        "scientific_name": "Ammodramus savannarum",
+        "habitat": "Grasslands, hayfields",
+        "conservation_status": "Least Concern",
+        "description": "Flat-headed, short-tailed sparrow. Song is a thin buzz that sounds like a grasshopper."
+    },
+    "122.Harris_Sparrow": {
+        "common_name": "Harris's Sparrow",
+        "scientific_name": "Zonotrichia querula",
+        "habitat": "Tundra edges (breeding), bushy areas (winter)",
+        "conservation_status": "Least Concern",
+        "description": "Largest of the sparrows. Breeding adults have a black bib, face, and crown. Winters in Great Plains."
+    },
+    "123.Henslow_Sparrow": {
+        "common_name": "Henslow's Sparrow",
+        "scientific_name": "Centronyx henslowii",
+        "habitat": "Tallgrass prairies",
+        "conservation_status": "Near Threatened",
+        "description": "Secretive sparrow with an olive-greenish head. Song is a very short, pathetic 't-slick'."
+    },
+    "124.Le_Conte_Sparrow": {
+        "common_name": "LeConte's Sparrow",
+        "scientific_name": "Ammospiza leconteii",
+        "habitat": "Wet meadows, marshes",
+        "conservation_status": "Least Concern",
+        "description": "Beautiful golden-orange sparrow. Very secretive, skulking in dense grass like a mouse."
+    },
+    "125.Lincoln_Sparrow": {
+        "common_name": "Lincoln's Sparrow",
+        "scientific_name": "Melospiza lincolnii",
+        "habitat": "Bogs (breeding), brush (winter)",
+        "conservation_status": "Least Concern",
+        "description": "Dainty sparrow with fine, crisp streaking on a buffy breast. Shy and hard to see well."
+    },
+    "126.Nelson_Sharp_tailed_Sparrow": {
+        "common_name": "Nelson's Sparrow",
+        "scientific_name": "Ammospiza nelsoni",
+        "habitat": "Marshes (salt and fresh)",
+        "conservation_status": "Least Concern",
+        "description": "Bright orange-buff face and breast. Breeds in interior prairies and coastal marshes."
+    },
+    "127.Savannah_Sparrow": {
+        "common_name": "Savannah Sparrow",
+        "scientific_name": "Passerculus sandwichensis",
+        "habitat": "Open fields, meadows",
+        "conservation_status": "Least Concern",
+        "description": "Widespread grassland sparrow. Usually shows a yellow wash on the face near the eye."
+    },
+    "128.Seaside_Sparrow": {
+        "common_name": "Seaside Sparrow",
+        "scientific_name": "Ammospiza maritima",
+        "habitat": "Salt marshes",
+        "conservation_status": "Least Concern",
+        "description": "Dark, dingy sparrow restricted to salt marshes. Has a yellow spot before the eye."
+    },
+    "129.Song_Sparrow": {
+        "common_name": "Song Sparrow",
+        "scientific_name": "Melospiza melodia",
+        "habitat": "Brushy areas, marshes, gardens",
+        "conservation_status": "Least Concern",
+        "description": "Highly variable but usually has coarse streaks converging into a central breast spot. Famous for its cheerful song."
+    },
+    "130.Tree_Sparrow": {
+        "common_name": "American Tree Sparrow",
+        "scientific_name": "Spizelloides arborea",
+        "habitat": "Tundra (breeding), weedy fields (winter)",
+        "conservation_status": "Least Concern",
+        "description": "Winter visitor to the US. Rufous cap and a dark central breast spot on a clear gray breast."
+    },
+    "131.Vesper_Sparrow": {
+        "common_name": "Vesper Sparrow",
+        "scientific_name": "Pooecetes gramineus",
+        "habitat": "Short-grass fields, pastures",
+        "conservation_status": "Least Concern",
+        "description": "Streaky sparrow with white outer tail feathers. Known for singing in the evening twilight."
+    },
+    "132.White_crowned_Sparrow": {
+        "common_name": "White-crowned Sparrow",
+        "scientific_name": "Zonotrichia leucophrys",
+        "habitat": "Brush, hedges, tundra",
+        "conservation_status": "Least Concern",
+        "description": "Elegant sparrow with bold black and white head stripes. Young birds have brown and tan stripes."
+    },
+    "133.White_throated_Sparrow": {
+        "common_name": "White-throated Sparrow",
+        "scientific_name": "Zonotrichia albicollis",
+        "habitat": "Forest edges, thickets (winter)",
+        "conservation_status": "Least Concern",
+        "description": "Well-defined white throat patch and yellow lores. Song is a clear whistle 'Oh-sweet-canada-canada'."
+    },
+    "134.Cape_Glossy_Starling": {
+        "common_name": "Cape Starling",
+        "scientific_name": "Lamprotornis nitens",
+        "habitat": "Savannas, open woodland (Africa)",
+        "conservation_status": "Least Concern",
+        "description": "A bird of southern Africa. Glossy blue-green plumage with a bright orange-yellow eye."
+    },
+    "135.Bank_Swallow": {
+        "common_name": "Bank Swallow",
+        "scientific_name": "Riparia riparia",
+        "habitat": "Riverbanks, cliffs",
+        "conservation_status": "Least Concern",
+        "description": "Small swallow with brown back and a distinct brown breast band. Nests in burrows in sandy banks."
+    },
+    "136.Barn_Swallow": {
+        "common_name": "Barn Swallow",
+        "scientific_name": "Hirundo rustica",
+        "habitat": "Open country, farms, buildings",
+        "conservation_status": "Least Concern",
+        "description": "Cobalt blue above, tawny below. Deeply forked tail. Nests in mud cups on man-made structures."
+    },
+    "137.Cliff_Swallow": {
+        "common_name": "Cliff Swallow",
+        "scientific_name": "Petrochelidon pyrrhonota",
+        "habitat": "Cliffs, bridges, dams",
+        "conservation_status": "Least Concern",
+        "description": "Square-tailed swallow with a buffy rump and chestnut throat. Builds gourd-shaped mud nests in colonies."
+    },
+    "138.Tree_Swallow": {
+        "common_name": "Tree Swallow",
+        "scientific_name": "Tachycineta bicolor",
+        "habitat": "Open fields near water",
+        "conservation_status": "Least Concern",
+        "description": "Iridescent blue-green back and pure white underparts. Nests in tree cavities and bluebird boxes."
+    },
+    "139.Scarlet_Tanager": {
+        "common_name": "Scarlet Tanager",
+        "scientific_name": "Piranga olivacea",
+        "habitat": "Deep deciduous forests",
+        "conservation_status": "Least Concern",
+        "description": "Breeding males are blindingly red with jet-black wings and tail. They stay high in the canopy."
+    },
+    "140.Summer_Tanager": {
+        "common_name": "Summer Tanager",
+        "scientific_name": "Piranga rubra",
+        "habitat": "Open woodlands, riparian areas",
+        "conservation_status": "Least Concern",
+        "description": "The only entirely red bird in North America (males). Females are yellow. Specialized bee and wasp eaters."
+    },
+    "141.Artic_Tern": {
+        "common_name": "Arctic Tern",
+        "scientific_name": "Sterna paradisaea",
+        "habitat": "Tundra (breeding), Open Ocean",
+        "conservation_status": "Least Concern",
+        "description": "The world's longest-distance migrant, flying pole to pole each year. White with a black cap and red beak."
+    },
+    "142.Black_Tern": {
+        "common_name": "Black Tern",
+        "scientific_name": "Chlidonias niger",
+        "habitat": "Marsh wetlands",
+        "conservation_status": "Least Concern",
+        "description": "Small, graceful tern. Breeding adults are unmistakable with a black head and body and gray wings."
+    },
+    "143.Caspian_Tern": {
+        "common_name": "Caspian Tern",
+        "scientific_name": "Hydroprogne caspia",
+        "habitat": "Coasts, large lakes",
+        "conservation_status": "Least Concern",
+        "description": "The largest tern in the world. Heavy bright red bill and deep rasping call. Resembles a gull in bulk."
+    },
+    "144.Common_Tern": {
+        "common_name": "Common Tern",
+        "scientific_name": "Sterna hirundo",
+        "habitat": "Beaches, lakes",
+        "conservation_status": "Least Concern",
+        "description": "Elegant seabird with a black cap, orange-red bill (with black tip), and deeply forked tail."
+    },
+    "145.Elegant_Tern": {
+        "common_name": "Elegant Tern",
+        "scientific_name": "Thalasseus elegans",
+        "habitat": "Coastal beaches (Cal/Mexico)",
+        "conservation_status": "Near Threatened",
+        "description": "A crowded nester on islands. Has a long, slender, slightly drooping orange bill and shaggy crest."
+    },
+    "146.Forsters_Tern": {
+        "common_name": "Forster's Tern",
+        "scientific_name": "Sterna forsteri",
+        "habitat": "Marshes, wetlands",
+        "conservation_status": "Least Concern",
+        "description": "Marsh-dwelling tern. In winter, it has a distinctive black eye patch (ear muffs) on a white head."
+    },
+    "147.Least_Tern": {
+        "common_name": "Least Tern",
+        "scientific_name": "Sternula antillarum",
+        "habitat": "Sandy beaches, rivers",
+        "conservation_status": "Least Concern",
+        "description": "The smallest North American tern. Distinctive yellow bill and white forehead patch. Nests on sandy flats."
+    },
+    "148.Green_tailed_Towhee": {
+        "common_name": "Green-tailed Towhee",
+        "scientific_name": "Pipilo chlorurus",
+        "habitat": "Shrubby slopes, mountains",
+        "conservation_status": "Least Concern",
+        "description": "A colorful sparrow relative with an olive-green back and rust-red cap. Secretive bird of mountain chaparral."
+    },
+    "149.Brown_Thrasher": {
+        "common_name": "Brown Thrasher",
+        "scientific_name": "Toxostoma rufum",
+        "habitat": "Thickets, hedgerows",
+        "conservation_status": "Least Concern",
+        "description": "Large, foxy-red bird with a heavily streaked breast and long tail. Excellent mimic with over 1000 song types."
+    },
+    "150.Sage_Thrasher": {
+        "common_name": "Sage Thrasher",
+        "scientific_name": "Oreoscoptes montanus",
+        "habitat": "Sagebrush plains",
+        "conservation_status": "Least Concern",
+        "description": "Smallest thrasher. Grayish-brown with yellow eyes and heavy spotting. Relies on sagebrush for nesting."
+    },
+    "151.Black_capped_Vireo": {
+        "common_name": "Black-capped Vireo",
+        "scientific_name": "Vireo atricapilla",
+        "habitat": "Scrub oaks (Texas/Oklahoma/Mexico)",
+        "conservation_status": "Vulnerable",
+        "description": "Rare bird with a striking black hood and white spectacles. Endangered by habitat loss and cowbird parasitism."
+    },
+    "152.Blue_headed_Vireo": {
+        "common_name": "Blue-headed Vireo",
+        "scientific_name": "Vireo solitarius",
+        "habitat": "Mixed forests",
+        "conservation_status": "Least Concern",
+        "description": "Beautiful vireo with a blue-gray head, white spectacles, and greenish back. Very deliberate, slow movements."
+    },
+    "153.Philadelphia_Vireo": {
+        "common_name": "Philadelphia Vireo",
+        "scientific_name": "Vireo philadelphicus",
+        "habitat": "Deciduous forests",
+        "conservation_status": "Least Concern",
+        "description": "Plain vireo, very similar to Warbling Vireo but usually shows more yellow on the underparts. Breeds in Canada."
+    },
+    "154.Red_eyed_Vireo": {
+        "common_name": "Red-eyed Vireo",
+        "scientific_name": "Vireo olivaceus",
+        "habitat": "Canopy of deciduous forests",
+        "conservation_status": "Least Concern",
+        "description": "A tireless singer even in the heat of midday. Olive-green above with a gray cap and red eye."
+    },
+    "155.Warbling_Vireo": {
+        "common_name": "Warbling Vireo",
+        "scientific_name": "Vireo gilvus",
+        "habitat": "Open deciduous woods, cottonwoods",
+        "conservation_status": "Least Concern",
+        "description": "Plain gray-olive bird best known for its rambling, cheerful warble. Prefers treetops near water."
+    },
+    "156.White_eyed_Vireo": {
+        "common_name": "White-eyed Vireo",
+        "scientific_name": "Vireo griseus",
+        "habitat": "Thickets, scrub",
+        "conservation_status": "Least Concern",
+        "description": "Secretive bird of dense brush. 'Quick, with the beer check!' song. Pale eye and yellow spectacles."
+    },
+    "157.Yellow_throated_Vireo": {
+        "common_name": "Yellow-throated Vireo",
+        "scientific_name": "Vireo flavifrons",
+        "habitat": "Mature deciduous forests",
+        "conservation_status": "Least Concern",
+        "description": "Bright yellow throat and breast with green back. 'Three-eight' song sounds like a hoarse Robin."
+    },
+    "158.Bay_breasted_Warbler": {
+        "common_name": "Bay-breasted Warbler",
+        "scientific_name": "Setophaga castanea",
+        "habitat": "Boreal spruce forests",
+        "conservation_status": "Least Concern",
+        "description": "Breeding males have a dark chestnut face, throat, and sides. Specialized on spruce budworms."
+    },
+    "159.Black_and_white_Warbler": {
+        "common_name": "Black-and-white Warbler",
+        "scientific_name": "Mniotilta varia",
+        "habitat": "Deciduous/Mixed forests",
+        "conservation_status": "Least Concern",
+        "description": "Striped like a zebra. Uniquely creeps along tree trunks and branches like a nuthatch."
+    },
+    "160.Black_throated_Blue_Warbler": {
+        "common_name": "Black-throated Blue Warbler",
+        "scientific_name": "Setophaga caerulescens",
+        "habitat": "Deep hardwood forests",
+        "conservation_status": "Least Concern",
+        "description": "Males are elegant: midnight blue back, black face/throat, and pure white belly. 'Zoo-zoo-zoo-zee' song."
+    },
+    "161.Blue_winged_Warbler": {
+        "common_name": "Blue-winged Warbler",
+        "scientific_name": "Vermivora cyanoptera",
+        "habitat": "Shrubby fields, forest edges",
+        "conservation_status": "Least Concern",
+        "description": "Yellow butterball with blue-gray wings. Song is a simple 'Bee-buzz'. Hybridizes with Golden-winged Warbler."
+    },
+    "162.Canada_Warbler": {
+        "common_name": "Canada Warbler",
+        "scientific_name": "Cardellina canadensis",
+        "habitat": "Moist forest undergrowth",
+        "conservation_status": "Least Concern",
+        "description": "Necklaced warbler. Blue-gray above, yellow below with a bold black necklace of streaks."
+    },
+    "163.Cape_May_Warbler": {
+        "common_name": "Cape May Warbler",
+        "scientific_name": "Setophaga tigrina",
+        "habitat": "Boreal spruce forests",
+        "conservation_status": "Least Concern",
+        "description": "Tiger-striped warbler with chestnut cheeks. High-pitched, seet-seet-seet song. Follows spruce budworm outbreaks."
+    },
+    "164.Cerulean_Warbler": {
+        "common_name": "Cerulean Warbler",
+        "scientific_name": "Setophaga cerulea",
+        "habitat": "Mature deciduous canopy",
+        "conservation_status": "Near Threatened",
+        "description": "Sky-blue male lives high in the treetops. Declining rapidly due to fragmentation of mature forests."
+    },
+    "165.Chestnut_sided_Warbler": {
+        "common_name": "Chestnut-sided Warbler",
+        "scientific_name": "Setophaga pensylvanica",
+        "habitat": "Young bushy forests",
+        "conservation_status": "Least Concern",
+        "description": "Yellow cap and extensive chestnut streaks on sides. 'Pleased, pleased, pleased to MEETCHA' song."
+    },
+    "166.Golden_winged_Warbler": {
+        "common_name": "Golden-winged Warbler",
+        "scientific_name": "Vermivora chrysoptera",
+        "habitat": "Shrubby wetlands, early successional",
+        "conservation_status": "Near Threatened",
+        "description": "Striking gray warbler with yellow wing patches and golden crown. Black throat and mask."
+    },
+    "167.Hooded_Warbler": {
+        "common_name": "Hooded Warbler",
+        "scientific_name": "Setophaga citrina",
+        "habitat": "Forest understory",
+        "conservation_status": "Least Concern",
+        "description": "Bright yellow face surrounded by a black hood. Flashes white tail spots frequently."
+    },
+    "168.Kentucky_Warbler": {
+        "common_name": "Kentucky Warbler",
+        "scientific_name": "Geothlypis formosa",
+        "habitat": "Deep deciduous woods",
+        "conservation_status": "Least Concern",
+        "description": "A bird of the forest floor with a black mask and yellow spectacles. Song is a rolling 'churry-churry-churry'."
+    },
+    "169.Magnolia_Warbler": {
+        "common_name": "Magnolia Warbler",
+        "scientific_name": "Setophaga magnolia",
+        "habitat": "Conifers (breeding)",
+        "conservation_status": "Least Concern",
+        "description": "Black necklace on yellow breast, black mask, and white wing patches. Tail has a distinctive white band."
+    },
+    "170.Mourning_Warbler": {
+        "common_name": "Mourning Warbler",
+        "scientific_name": "Geothlypis philadelphia",
+        "habitat": "Dense thickets, regrowth",
+        "conservation_status": "Least Concern",
+        "description": "Skulking warbler with a gray hood and black patch on the breast (mourning veil). Avoids open view."
+    },
+    "171.Myrtle_Warbler": {
+        "common_name": "Myrtle Warbler (Yellow-rumped)",
+        "scientific_name": "Setophaga coronata",
+        "habitat": "Coniferous forests, open woods",
+        "conservation_status": "Least Concern",
+        "description": "The 'Butterbutt'. Abundant and hardy warbler with a bright yellow rump. Can digest wax on bayberries."
+    },
+    "172.Nashville_Warbler": {
+        "common_name": "Nashville Warbler",
+        "scientific_name": "Leiothlypis ruficapilla",
+        "habitat": "Bogs, cedar swamps",
+        "conservation_status": "Least Concern",
+        "description": "Small warbler with a gray head, white eye-ring, and yellow throat. Nests on the ground in moss."
+    },
+    "173.Orange_crowned_Warbler": {
+        "common_name": "Orange-crowned Warbler",
+        "scientific_name": "Leiothlypis celata",
+        "habitat": "Brushy thickets, chaparral",
+        "conservation_status": "Least Concern",
+        "description": "One of the drabber warblers. Olive-green overall with blurry streaks. The orange crown is rarely hidden."
+    },
+    "174.Palm_Warbler": {
+        "common_name": "Palm Warbler",
+        "scientific_name": "Setophaga palmarum",
+        "habitat": "Bogs (breeding), fields (winter)",
+        "conservation_status": "Least Concern",
+        "description": "A tail-wagging ground warbler. Breeding adults have a rusty cap and yellow underparts."
+    },
+    "175.Pine_Warbler": {
+        "common_name": "Pine Warbler",
+        "scientific_name": "Setophaga pinus",
+        "habitat": "Pine forests",
+        "conservation_status": "Least Concern",
+        "description": "Strictly associated with pine trees. Large, heavy-billed warbler. Olive-green above, yellow below."
+    },
+    "176.Prairie_Warbler": {
+        "common_name": "Prairie Warbler",
+        "scientific_name": "Setophaga discolor",
+        "habitat": "Scrubby fields, regenerating forest",
+        "conservation_status": "Least Concern",
+        "description": "Tail-wagger of the brush. Yellow with black streaks on sides and a unique semi-circular black face pattern."
+    },
+    "177.Prothonotary_Warbler": {
+        "common_name": "Prothonotary Warbler",
+        "scientific_name": "Protonotaria citrea",
+        "habitat": "Flooded swamps, cypress",
+        "conservation_status": "Least Concern",
+        "description": "The 'Golden Swamp Warbler'. Brilliant whole-yellow head. Nests in tree cavities over water."
+    },
+    "178.Swainson_Warbler": {
+        "common_name": "Swainson's Warbler",
+        "scientific_name": "Limnothlypis swainsonii",
+        "habitat": "Canebrakes, dense swamps",
+        "conservation_status": "Least Concern",
+        "description": "Drab brown, secretive warbler of the southeastern swamps. Famous for its loud, ringing song."
+    },
+    "179.Tennessee_Warbler": {
+        "common_name": "Tennessee Warbler",
+        "scientific_name": "Leiothlypis peregrina",
+        "habitat": "Boreal forests",
+        "conservation_status": "Least Concern",
+        "description": "Dainty warbler that resembles a vireo. Green back, gray head, and white eyebrow. loud staccato song."
+    },
+    "180.Wilson_Warbler": {
+        "common_name": "Wilson's Warbler",
+        "scientific_name": "Cardellina pusilla",
+        "habitat": "Willow thickets, moist brush",
+        "conservation_status": "Least Concern",
+        "description": "Small, frantic yellow warbler with a distinct black cap (toupee). Often flycatches in low bushes."
+    },
+    "181.Worm_eating_Warbler": {
+        "common_name": "Worm-eating Warbler",
+        "scientific_name": "Helmitheros vermivorum",
+        "habitat": "Steep wooded slopes",
+        "conservation_status": "Least Concern",
+        "description": "Drab warbler with bold black stripes on a buffy head. Probes dead leaves for insect larvae (not earthworms)."
+    },
+    "182.Yellow_Warbler": {
+        "common_name": "Yellow Warbler",
+        "scientific_name": "Setophaga petechia",
+        "habitat": "Willows, wet thickets",
+        "conservation_status": "Least Concern",
+        "description": "Widespread sun-drop bird. Males have rusty streaks on the breast. 'Sweet, sweet, sweet, I'm so sweet!' song."
+    },
+    "183.Northern_Waterthrush": {
+        "common_name": "Northern Waterthrush",
+        "scientific_name": "Parkesia noveboracensis",
+        "habitat": "Swamps, bogs, streamsides",
+        "conservation_status": "Least Concern",
+        "description": "Brown warbler that walks along water's edge constantly bobbing its tail. Creamy eyebrow."
+    },
+    "184.Louisiana_Waterthrush": {
+        "common_name": "Louisiana Waterthrush",
+        "scientific_name": "Parkesia motacilla",
+        "habitat": "Fast-flowing rocky streams",
+        "conservation_status": "Least Concern",
+        "description": "Similar to Northern Waterthrush but with a bright white eyebrow and unspotted throat. Prefers rushing water."
+    },
+    "185.Bohemian_Waxwing": {
+        "common_name": "Bohemian Waxwing",
+        "scientific_name": "Bombycilla garrulus",
+        "habitat": "Boreal forests, fruit trees",
+        "conservation_status": "Least Concern",
+        "description": "Large, gray-brown nomad of the north. Rusty undertail distinguish it from Cedar Waxwings."
+    },
+    "186.Cedar_Waxwing": {
+        "common_name": "Cedar Waxwing",
+        "scientific_name": "Bombycilla cedrorum",
+        "habitat": "Woodlands, orchards, gardens",
+        "conservation_status": "Least Concern",
+        "description": "Silky, crested bird with waxy red tips on wing feathers. Highly social fruit-eaters."
+    },
+    "187.American_Three_toed_Woodpecker": {
+        "common_name": "American Three-toed Woodpecker",
+        "scientific_name": "Picoides dorsalis",
+        "habitat": "Disturbed coniferous forests (burns)",
+        "conservation_status": "Least Concern",
+        "description": "Specialized woodpecker that flakes bark off dead trees. Has a yellow crown patch and barred back."
+    },
+    "188.Pileated_Woodpecker": {
+        "common_name": "Pileated Woodpecker",
+        "scientific_name": "Dryocopus pileatus",
+        "habitat": "Mature forests",
+        "conservation_status": "Least Concern",
+        "description": "Crow-sized woodpecker with a flaming red crest. Excavates large rectangular holes in search of carpenter ants."
+    },
+    "189.Red_bellied_Woodpecker": {
+        "common_name": "Red-bellied Woodpecker",
+        "scientific_name": "Melanerpes carolinus",
+        "habitat": "Forests, woodlands, feeders",
+        "conservation_status": "Least Concern",
+        "description": "Poorly named; the belly is barely red. Has a zebra-striped back and red nape/crown. Noisy 'churr' call."
+    },
+    "190.Red_cockaded_Woodpecker": {
+        "common_name": "Red-cockaded Woodpecker",
+        "scientific_name": "Leuconotopicus borealis",
+        "habitat": "Mature longleaf pine forests",
+        "conservation_status": "Near Threatened",
+        "description": "Endangered specialist of old-growth pines. Drills cavities in living trees infected with heart rot."
+    },
+    "191.Red_headed_Woodpecker": {
+        "common_name": "Red-headed Woodpecker",
+        "scientific_name": "Melanerpes erythrocephalus",
+        "habitat": "Open savannahs, dead trees",
+        "conservation_status": "Near Threatened",
+        "description": "Unmistakable with an entirely red head, black back, and large white wing patches. Catches insects in flight."
+    },
+    "192.Downy_Woodpecker": {
+        "common_name": "Downy Woodpecker",
+        "scientific_name": "Dryobates pubescens",
+        "habitat": "Woodlands, parks, backyards",
+        "conservation_status": "Least Concern",
+        "description": "The smallest North American woodpecker. Black and white styling. Short bill (unlike Hairy Woodpecker)."
+    },
+    "193.Bewick_Wren": {
+        "common_name": "Bewick's Wren",
+        "scientific_name": "Thryomanes bewickii",
+        "habitat": "Brushy areas, gardens",
+        "conservation_status": "Least Concern",
+        "description": "Active wren with a long tail often flicked sideways. Bold white eyebrow. Declining in the East."
+    },
+    "194.Cactus_Wren": {
+        "common_name": "Cactus Wren",
+        "scientific_name": "Campylorhynchus brunneicapillus",
+        "habitat": "Deserts (Cholla cactus)",
+        "conservation_status": "Least Concern",
+        "description": "Largest US wren. Heavily spotted breast. Nests in cholla cacti in the Sonoran desert."
+    },
+    "195.Carolina_Wren": {
+        "common_name": "Carolina Wren",
+        "scientific_name": "Thryothorus ludovicianus",
+        "habitat": "Thickets, gardens",
+        "conservation_status": "Least Concern",
+        "description": "Large, rusty wren with a bold white eyebrow. Loud 'teakettle-teakettle-teakettle' song echoes in backyards."
+    },
+    "196.House_Wren": {
+        "common_name": "House Wren",
+        "scientific_name": "Troglodytes aedon",
+        "habitat": "Brushy edges, backyards",
+        "conservation_status": "Least Concern",
+        "description": "Energetic, plain brown wren. Bubbling, exuberant song. Aggressively evicts other birds from nest boxes."
+    },
+    "197.Marsh_Wren": {
+        "common_name": "Marsh Wren",
+        "scientific_name": "Cistothorus palustris",
+        "habitat": "Cattail marshes",
+        "conservation_status": "Least Concern",
+        "description": "Noisy denizen of the marshes. Rusty back with white stripes. Males build multiple 'dummy nests'."
+    },
+    "198.Rock_Wren": {
+        "common_name": "Rock Wren",
+        "scientific_name": "Salpinctes obsoletus",
+        "habitat": "Rocky canyons, scree slopes",
+        "conservation_status": "Least Concern",
+        "description": "Pale gray wren that bounces on rocks. Paves the entrance to its nest crevice with small stones."
+    },
+    "199.Winter_Wren": {
+        "common_name": "Winter Wren",
+        "scientific_name": "Troglodytes hiemalis",
+        "habitat": "Coniferous forests, root masses",
+        "conservation_status": "Least Concern",
+        "description": "Tiny, dark ball of energy with a stubby tail. Incredible, long, tinkling song for such a small bird."
+    },
+    "200.Common_Yellowthroat": {
+        "common_name": "Common Yellowthroat",
+        "scientific_name": "Geothlypis trichas",
+        "habitat": "Marshes, wet thickets",
+        "conservation_status": "Least Concern",
+        "description": "The 'masked bandit' warbler. Males have a black mask. Song is a distinctive 'witchety-witchety-witchety'."
+    },
+    "Andean Tinamou": {
+        "common_name": "Andean Tinamou",
+        "scientific_name": "Nothoprocta pentlandii",
+        "habitat": "High altitude shrubland (Andes)",
+        "conservation_status": "Least Concern",
+        "description": "A ground-dwelling bird found in the Andes mountains. It has mottled plumage for camouflage."
+    },
+    "Emu": {
+        "common_name": "Emu",
+        "scientific_name": "Dromaius novaehollandiae",
+        "habitat": "Savannah, scrub, forest (Australia)",
+        "conservation_status": "Least Concern",
+        "description": "The second-largest living bird by height. Endemic to Australia, it is flightless and has soft-feathered, brown plumage."
+    },
+    "Common Ostrich": {
+        "common_name": "Common Ostrich",
+        "scientific_name": "Struthio camelus",
+        "habitat": "Savanna, desert (Africa)",
+        "conservation_status": "Least Concern",
+        "description": "The largest living bird species. It is flightless and native to Africa, known for its speed and large eggs."
+    },
+    "Southern Cassowary": {
+        "common_name": "Southern Cassowary",
+        "scientific_name": "Casuarius casuarius",
+        "habitat": "Tropical rainforests (New Guinea/Australia)",
+        "conservation_status": "Least Concern",
+        "description": "A large, flightless bird with a distinctive helmet-like casque and vivid blue/red neck skin. Known as 'the world's most dangerous bird'."
+    },
+    "Great Spotted Kiwi": {
+        "common_name": "Great Spotted Kiwi",
+        "scientific_name": "Apteryx haastii",
+        "habitat": "Forests, alpine areas (New Zealand)",
+        "conservation_status": "Vulnerable",
+        "description": "The largest kiwi species. It is nocturnal, flightless, and has gray-brown mottled plumage."
+    },
+    "Barred Tinamou": {
+        "common_name": "Barred Tinamou",
+        "scientific_name": "Crypturellus casiquiare",
+        "habitat": "Tropical moist forests",
+        "conservation_status": "Least Concern",
+        "description": "A shy, ground-dwelling bird of the Amazon rainforest."
+    },
+    "Dusky-legged Guan": {
+        "common_name": "Dusky-legged Guan",
+        "scientific_name": "Penelope obscura",
+        "habitat": "Forests (South America)",
+        "conservation_status": "Least Concern",
+        "description": "A large, turkey-like bird found in forests of Brazil and Argentina."
+    },
+    "Ornate Tinamou": {
+        "common_name": "Ornate Tinamou",
+        "scientific_name": "Nothoprocta ornata",
+        "habitat": "High-altitude grasslands",
+        "conservation_status": "Least Concern",
+        "description": "Inhabits the puna grasslands of the Andes."
+    },
+    "Okarito Kiwi": {
+        "common_name": "Okarito Kiwi",
+        "scientific_name": "Apteryx rowi",
+        "habitat": "Forests (New Zealand)",
+        "conservation_status": "Vulnerable",
+        "description": "A rare species of kiwi found only in the Okarito forest."
+    },
+    "Black-billed Brushturkey": {
+        "common_name": "Black-billed Brushturkey",
+        "scientific_name": "Talegalla fuscirostris",
+        "habitat": "Forests (New Guinea)",
+        "conservation_status": "Least Concern",
+        "description": "A mound-building bird typical of New Guinea forests."
+    },
+    "Cinereous Tinamou": {
+        "common_name": "Cinereous Tinamou",
+        "scientific_name": "Crypturellus cinereus",
+        "habitat": "Tropical forests",
+        "conservation_status": "Least Concern",
+        "description": "A smoky-gray tinamou found in the Amazon basin."
+    },
+    "Greater Rhea": {
+        "common_name": "Greater Rhea",
+        "scientific_name": "Rhea americana",
+        "habitat": "Open pampas, woodlands",
+        "conservation_status": "Near Threatened",
+        "description": "A large flightless bird of South America, resembling a small ostrich."
+    },
+    "Tongan Megapode": {
+        "common_name": "Tongan Megapode",
+        "scientific_name": "Megapodius pritchardii",
+        "habitat": "Tropical forests (Tonga)",
+        "conservation_status": "Endangered",
+        "description": "A rare mound-builder endemic to Tonga, relying on volcanic heat for incubation."
+    },
+    "Brushland Tinamou": {
+        "common_name": "Brushland Tinamou",
+        "scientific_name": "Nothoprocta cinerascens",
+        "habitat": "Dry scrub, woodland",
+        "conservation_status": "Least Concern",
+        "description": "Found in the Gran Chaco region of South America."
+    },
+    "Darwins Nothura": {
+        "common_name": "Darwin's Nothura",
+        "scientific_name": "Nothura darwinii",
+        "habitat": "Grasslands, scrub",
+        "conservation_status": "Least Concern",
+        "description": "A small tinamou of the Andean highlands."
+    },
+    "Biak Scrubfowl": {
+        "common_name": "Biak Scrubfowl",
+        "scientific_name": "Megapodius geelvinkianus",
+        "habitat": "Forests (Biak island)",
+        "conservation_status": "Vulnerable",
+        "description": "Endemic to the island of Biak in Indonesia."
+    },
+    "Colombian Chachalaca": {
+        "common_name": "Colombian Chachalaca",
+        "scientific_name": "Ortalis columbiana",
+        "habitat": "Forests, scrub",
+        "conservation_status": "Least Concern",
+        "description": "Endemic to Colombia, often seen in groups."
+    },
+    "White-bellied Chachalaca": {
+        "common_name": "White-bellied Chachalaca",
+        "scientific_name": "Ortalis leucogastra",
+        "habitat": "Forests, plantations",
+        "conservation_status": "Least Concern",
+        "description": "Found in Central America, known for its loud calls."
+    },
+    "Northern Cassowary": {
+        "common_name": "Northern Cassowary",
+        "scientific_name": "Casuarius unappendiculatus",
+        "habitat": "Coastal swamps, rainforests",
+        "conservation_status": "Least Concern",
+        "description": "A large cassowary of New Guinea with a single wattle."
+    },
+    "Highland Tinamou": {
+        "common_name": "Highland Tinamou",
+        "scientific_name": "Nothocercus bonapartei",
+        "habitat": "Cloud forests",
+        "conservation_status": "Least Concern",
+        "description": "Inhabits montane forests in the Andes and Central America."
+    },
+    "Red-winged Tinamou": {
+        "common_name": "Red-winged Tinamou",
+        "scientific_name": "Rhynchotus rufescens",
+        "habitat": "Grasslands",
+        "conservation_status": "Least Concern",
+        "description": "Known for its rufous flight feathers visible in flight."
+    },
+    "East Brazilian Chachalaca": {
+        "common_name": "East Brazilian Chachalaca",
+        "scientific_name": "Ortalis araucuan",
+        "habitat": "Atlantic Forest",
+        "conservation_status": "Least Concern",
+        "description": "Endemic to eastern Brazil."
+    },
+    "Black Tinamou": {
+        "common_name": "Black Tinamou",
+        "scientific_name": "Tinamus osgoodi",
+        "habitat": "Montane humid forests",
+        "conservation_status": "Vulnerable",
+        "description": "A rare and dark-plumaged tinamou of the Andes."
+    },
+    "Southern Brown Kiwi": {
+        "common_name": "Southern Brown Kiwi",
+        "scientific_name": "Apteryx australis",
+        "habitat": "Forests, scrub",
+        "conservation_status": "Vulnerable",
+        "description": "The most common kiwi species in New Zealand's South Island."
+    },
+    "Cauca Guan": {
+        "common_name": "Cauca Guan",
+        "scientific_name": "Penelope perspicax",
+        "habitat": "Cloud forests",
+        "conservation_status": "Endangered",
+        "description": "A rare guan found only in the Cauca Valley of Colombia."
+    },
+    "Tawny-breasted Tinamou": {
+        "common_name": "Tawny-breasted Tinamou",
+        "scientific_name": "Nothocercus julius",
+        "habitat": "Montane forests",
+        "conservation_status": "Least Concern",
+        "description": "Lives in high-elevation forests of the Andes."
+    },
+    "Elegant Crested Tinamou": {
+        "common_name": "Elegant Crested Tinamou",
+        "scientific_name": "Eudromia elegans",
+        "habitat": "Steppe, brush",
+        "conservation_status": "Least Concern",
+        "description": "A beautiful tinamou with a long crest, found in Argentina."
+    },
+    "White-browed Guan": {
+        "common_name": "White-browed Guan",
+        "scientific_name": "Penelope jacucaca",
+        "habitat": "Caatinga scrub",
+        "conservation_status": "Vulnerable",
+        "description": "Endemic to dry forests of northeastern Brazil."
+    },
+    "Scaled Chachalaca": {
+        "common_name": "Scaled Chachalaca",
+        "scientific_name": "Ortalis squamata",
+        "habitat": "Forests",
+        "conservation_status": "Least Concern",
+        "description": "Endemic to Brazil, named for the scaled appearance of its breast feathers."
+    },
+    "Little Tinamou": {
+        "common_name": "Little Tinamou",
+        "scientific_name": "Crypturellus soui",
+        "habitat": "Forest edges, secondary growth",
+        "conservation_status": "Least Concern",
+        "description": "A small, widespread tinamou of Central and South America."
+    },
+    "Plain Chachalaca": {
+        "common_name": "Plain Chachalaca",
+        "scientific_name": "Ortalis vetula",
+        "habitat": "Thickets, river edges",
+        "conservation_status": "Least Concern",
+        "description": "The only chachalaca found in the USA (Texas). Noisy and social."
+    },
+    "Australian Brushturkey": {
+        "common_name": "Australian Brushturkey",
+        "scientific_name": "Alectura lathami",
+        "habitat": "Rainforests, gardens",
+        "conservation_status": "Least Concern",
+        "description": "A large mound-builder common in eastern Australia."
+    },
+    "Andean Guan": {
+        "common_name": "Andean Guan",
+        "scientific_name": "Penelope montagnii",
+        "habitat": "Cloud forests",
+        "conservation_status": "Least Concern",
+        "description": "Found in the high Andes, often seen running along branches."
+    },
+    "Dusky Megapode": {
+        "common_name": "Dusky Megapode",
+        "scientific_name": "Megapodius freycinet",
+        "habitat": "Forests, mangroves",
+        "conservation_status": "Least Concern",
+        "description": "A dark-colored scrubfowl from Indonesia."
+    },
+    "North Island Brown Kiwi": {
+        "common_name": "North Island Brown Kiwi",
+        "scientific_name": "Apteryx mantelli",
+        "habitat": "Forests, scrub",
+        "conservation_status": "Vulnerable",
+        "description": "Widespread in the North Island of NZ. Flightless and nocturnal."
+    },
+    "Orange-footed Scrubfowl": {
+        "common_name": "Orange-footed Scrubfowl",
+        "scientific_name": "Megapodius reinwardt",
+        "habitat": "Forests, coastal scrub",
+        "conservation_status": "Least Concern",
+        "description": "Known for building massive incubation mounds of decaying vegetation."
+    },
+    "Bearded Guan": {
+        "common_name": "Bearded Guan",
+        "scientific_name": "Penelope barbata",
+        "habitat": "Cloud forests",
+        "conservation_status": "Vulnerable",
+        "description": "A rare guan of Ecuador and Peru with a distinctive beard."
+    },
+    "White-throated Tinamou": {
+        "common_name": "White-throated Tinamou",
+        "scientific_name": "Tinamus guttatus",
+        "habitat": "Tropical rainforests",
+        "conservation_status": "Near Threatened",
+        "description": "A rainforest tinamou with a white throat patch."
+    },
+    "West Mexican Chachalaca": {
+        "common_name": "West Mexican Chachalaca",
+        "scientific_name": "Ortalis poliocephala",
+        "habitat": "Deciduous forests",
+        "conservation_status": "Least Concern",
+        "description": "Endemic to western Mexico."
+    },
+    "Buff-browed Chachalaca": {
+        "common_name": "Buff-browed Chachalaca",
+        "scientific_name": "Ortalis superciliaris",
+        "habitat": "Forests, scrub",
+        "conservation_status": "Least Concern",
+        "description": "Found in northeastern Brazil."
+    },
+    "Dwarf Tinamou": {
+        "common_name": "Dwarf Tinamou",
+        "scientific_name": "Taoniscus nanus",
+        "habitat": "Cerrado grasslands",
+        "conservation_status": "Vulnerable",
+        "description": "A tiny, secretive tinamou of Brazilian grasslands."
+    },
+    "Brazilian Tinamou": {
+        "common_name": "Brazilian Tinamou",
+        "scientific_name": "Crypturellus strigulosus",
+        "habitat": "Rainforests",
+        "conservation_status": "Least Concern",
+        "description": "Inhabits the Amazon rainforest."
+    },
+    "Chilean Tinamou": {
+        "common_name": "Chilean Tinamou",
+        "scientific_name": "Nothoprocta perdicaria",
+        "habitat": "Fields, scrub",
+        "conservation_status": "Least Concern",
+        "description": "Endemic to Chile, often hunted for sport."
+    },
+    "Curve-billed Tinamou": {
+        "common_name": "Curve-billed Tinamou",
+        "scientific_name": "Nothoprocta curvirostris",
+        "habitat": "High Andes grasslands",
+        "conservation_status": "Least Concern",
+        "description": "Found in the p\u00e1ramo and puna of the Andes."
+    },
+    "Black-fronted Piping Guan": {
+        "common_name": "Black-fronted Piping Guan",
+        "scientific_name": "Pipile jacutinga",
+        "habitat": "Atlantic Forest",
+        "conservation_status": "Endangered",
+        "description": "A rare guan with a blue wattle and white wing patch."
+    },
+    "Yellow-legged Tinamou": {
+        "common_name": "Yellow-legged Tinamou",
+        "scientific_name": "Crypturellus noctivagus",
+        "habitat": "Forests, woody savanna",
+        "conservation_status": "Near Threatened",
+        "description": "Found in eastern Brazil."
+    },
+    "White-crested Guan": {
+        "common_name": "White-crested Guan",
+        "scientific_name": "Penelope pileata",
+        "habitat": "Rainforests",
+        "conservation_status": "Vulnerable",
+        "description": "Endemic to Brazil, known for its contrasting white crest."
+    },
+    "Huayco Tinamou": {
+        "common_name": "Huayco Tinamou",
+        "scientific_name": "Rhynchotus maculicollis",
+        "habitat": "Andean slopes, grain fields",
+        "conservation_status": "Least Concern",
+        "description": "Similar to the Red-winged Tinamou but found in the Bolivian Andes."
+    },
+    "Chaco Chachalaca": {
+        "common_name": "Chaco Chachalaca",
+        "scientific_name": "Ortalis canicollis",
+        "habitat": "Chaco scrub",
+        "conservation_status": "Least Concern",
+        "description": "Very common in the Gran Chaco region."
+    },
+    "Marail Guan": {
+        "common_name": "Marail Guan",
+        "scientific_name": "Penelope marail",
+        "habitat": "Rainforests",
+        "conservation_status": "Least Concern",
+        "description": "Found in the Guiana Shield forests."
+    },
+    "Speckled Chachalaca": {
+        "common_name": "Speckled Chachalaca",
+        "scientific_name": "Ortalis guttata",
+        "habitat": "Forests, second growth",
+        "conservation_status": "Least Concern",
+        "description": "Widespread in the Amazon."
+    },
+    "Crested Guan": {
+        "common_name": "Crested Guan",
+        "scientific_name": "Penelope purpurascens",
+        "habitat": "Tropical forests",
+        "conservation_status": "Least Concern",
+        "description": "A large guan of Central and northern South America."
+    },
+    "Baudo Guan": {
+        "common_name": "Baudo Guan",
+        "scientific_name": "Penelope ortoni",
+        "habitat": "Wet lowland forests",
+        "conservation_status": "Endangered",
+        "description": "Restricted to the Choc\u00f3 region of Colombia/Ecuador."
+    },
+    "Thicket Tinamou": {
+        "common_name": "Thicket Tinamou",
+        "scientific_name": "Crypturellus cinnamomeus",
+        "habitat": "Dry forests, thickets",
+        "conservation_status": "Least Concern",
+        "description": "Common in Mexico and Central American dry forests."
+    },
+    "Puna Tinamou": {
+        "common_name": "Puna Tinamou",
+        "scientific_name": "Tinamotis pentlandii",
+        "habitat": "High Andean grasslands",
+        "conservation_status": "Least Concern",
+        "description": "Inhabits the high-elevation puna."
+    },
+    "Great Tinamou": {
+        "common_name": "Great Tinamou",
+        "scientific_name": "Tinamus major",
+        "habitat": "Rainforests",
+        "conservation_status": "Near Threatened",
+        "description": "A large gamebird of Neotropical rainforests with a haunting song."
+    },
+    "Little Chachalaca": {
+        "common_name": "Little Chachalaca",
+        "scientific_name": "Ortalis motmot",
+        "habitat": "Forest edges, scrub",
+        "conservation_status": "Least Concern",
+        "description": "Found in northern South America."
+    },
+    "Rufous-headed Chachalaca": {
+        "common_name": "Rufous-headed Chachalaca",
+        "scientific_name": "Ortalis erythroptera",
+        "habitat": "Dry deciduous forests",
+        "conservation_status": "Vulnerable",
+        "description": "Endemic to Ecuador and Peru."
+    },
+    "Lesser Nothura": {
+        "common_name": "Lesser Nothura",
+        "scientific_name": "Nothura minor",
+        "habitat": "Cerrado grasslands",
+        "conservation_status": "Vulnerable",
+        "description": "A small, threatened tinamou of Brazil."
+    },
+    "Blue-throated Piping Guan": {
+        "common_name": "Blue-throated Piping Guan",
+        "scientific_name": "Pipile cumanensis",
+        "habitat": "Rainforests",
+        "conservation_status": "Least Concern",
+        "description": "A large bird with a blue wattle, found in the Amazon."
+    },
+    "Rusty Tinamou": {
+        "common_name": "Rusty Tinamou",
+        "scientific_name": "Crypturellus brevirostris",
+        "habitat": "Tropical forests",
+        "conservation_status": "Least Concern",
+        "description": "A small, reddish tinamou of Amazonia."
+    },
+    "Vanuatu Megapode": {
+        "common_name": "Vanuatu Megapode",
+        "scientific_name": "Megapodius layardi",
+        "habitat": "Forests (Vanuatu)",
+        "conservation_status": "Vulnerable",
+        "description": "Endemic to Vanuatu."
+    },
+    "Somali Ostrich": {
+        "common_name": "Somali Ostrich",
+        "scientific_name": "Struthio molybdophanes",
+        "habitat": "Dry shrublands (Horn of Africa)",
+        "conservation_status": "Vulnerable",
+        "description": "Distinct from the Common Ostrich, with blue-grey skin."
+    },
+    "Red-billed Brushturkey": {
+        "common_name": "Red-billed Brushturkey",
+        "scientific_name": "Talegalla cuvieri",
+        "habitat": "Forests (New Guinea)",
+        "conservation_status": "Least Concern",
+        "description": "A mound-builder with a red bill."
+    },
+    "Patagonian Tinamou": {
+        "common_name": "Patagonian Tinamou",
+        "scientific_name": "Tinamotis ingoufi",
+        "habitat": "Patagonian steppe",
+        "conservation_status": "Least Concern",
+        "description": "Found in southern Chile and Argentina."
+    },
+    "Chestnut-winged Chachalaca": {
+        "common_name": "Chestnut-winged Chachalaca",
+        "scientific_name": "Ortalis garrula",
+        "habitat": "Dry forests, scrub",
+        "conservation_status": "Least Concern",
+        "description": "Endemic to Colombia's Caribbean coast."
+    },
+    "Wattled Brushturkey": {
+        "common_name": "Wattled Brushturkey",
+        "scientific_name": "Aepypodius arfakianus",
+        "habitat": "Montane forests",
+        "conservation_status": "Least Concern",
+        "description": "Found in New Guinea highlands."
+    },
+    "New Guinea Scrubfowl": {
+        "common_name": "New Guinea Scrubfowl",
+        "scientific_name": "Megapodius decollatus",
+        "habitat": "Forests",
+        "conservation_status": "Least Concern",
+        "description": "A terrestrial bird of New Guinea."
+    },
+    "Taczanowskis Tinamou": {
+        "common_name": "Taczanowski's Tinamou",
+        "scientific_name": "Nothoprocta taczanowskii",
+        "habitat": "Andean grasslands",
+        "conservation_status": "Vulnerable",
+        "description": "A rare tinamou of Peru and Bolivia."
+    },
+    "Dwarf Cassowary": {
+        "common_name": "Dwarf Cassowary",
+        "scientific_name": "Casuarius bennetti",
+        "habitat": "Montane forests",
+        "conservation_status": "Least Concern",
+        "description": "The smallest of the three cassowary species."
+    },
+    "Maleo": {
+        "common_name": "Maleo",
+        "scientific_name": "Macrocephalon maleo",
+        "habitat": "Forests (Sulawesi)",
+        "conservation_status": "Endangered",
+        "description": "Famous for laying its eggs in warm sand or volcanic soil, not mounds."
+    },
+    "Quebracho Crested Tinamou": {
+        "common_name": "Quebracho Crested Tinamou",
+        "scientific_name": "Eudromia formosa",
+        "habitat": "Quebracho woodland",
+        "conservation_status": "Least Concern",
+        "description": "Found in the dry Chaco of Argentina and Paraguay."
+    },
+    "Grey-legged Tinamou": {
+        "common_name": "Grey-legged Tinamou",
+        "scientific_name": "Crypturellus duidae",
+        "habitat": "Forests, scrub",
+        "conservation_status": "Least Concern",
+        "description": "Found in the northern Amazon/Orinoco region."
+    },
+    "Moluccan Megapode": {
+        "common_name": "Moluccan Megapode",
+        "scientific_name": "Eulipoa wallacei",
+        "habitat": "Forests (Moluccas)",
+        "conservation_status": "Vulnerable",
+        "description": "Roosts in trees but buries eggs in sand beaches at night."
+    },
+    "Grey Tinamou": {
+        "common_name": "Grey Tinamou",
+        "scientific_name": "Tinamus tao",
+        "habitat": "Montane forests",
+        "conservation_status": "Vulnerable",
+        "description": "The largest tinamou species, bluish-grey in color."
+    },
+    "Sula Megapode": {
+        "common_name": "Sula Megapode",
+        "scientific_name": "Megapodius bernsteini",
+        "habitat": "Forests (Sula/Banggai)",
+        "conservation_status": "Vulnerable",
+        "description": "Restricted to islands in Indonesia."
+    },
+    "Slaty-breasted Tinamou": {
+        "common_name": "Slaty-breasted Tinamou",
+        "scientific_name": "Crypturellus boucardi",
+        "habitat": "Rainforests",
+        "conservation_status": "Least Concern",
+        "description": "Found in Central America."
+    },
+    "Philippine Megapode": {
+        "common_name": "Philippine Megapode",
+        "scientific_name": "Megapodius cumingii",
+        "habitat": "Forests, scrub",
+        "conservation_status": "Least Concern",
+        "description": "Common in the Philippines and Borneo."
+    },
+    "Trinidad Piping Guan": {
+        "common_name": "Trinidad Piping Guan",
+        "scientific_name": "Pipile pipile",
+        "habitat": "Forests (Trinidad)",
+        "conservation_status": "Critically Endangered",
+        "description": "One of the rarest birds in the world, endemic to Trinidad."
+    },
+    "Grey-headed Chachalaca": {
+        "common_name": "Grey-headed Chachalaca",
+        "scientific_name": "Ortalis cinereiceps",
+        "habitat": "Lowland forests",
+        "conservation_status": "Least Concern",
+        "description": "Found in Central America."
+    },
+    "Chestnut-headed Chachalaca": {
+        "common_name": "Chestnut-headed Chachalaca",
+        "scientific_name": "Ortalis wagleri",
+        "habitat": "Deciduous forests",
+        "conservation_status": "Least Concern",
+        "description": "Endemic to western Mexico."
+    },
+    "Small-billed Tinamou": {
+        "common_name": "Small-billed Tinamou",
+        "scientific_name": "Crypturellus parvirostris",
+        "habitat": "Savanna, scrub",
+        "conservation_status": "Least Concern",
+        "description": "Similar to the Tataupa Tinamou but with a shorter bill."
+    },
+    "Variegated Tinamou": {
+        "common_name": "Variegated Tinamou",
+        "scientific_name": "Crypturellus variegatus",
+        "habitat": "Forests",
+        "conservation_status": "Least Concern",
+        "description": "Has a distinctive barred back."
+    },
+    "Chestnut-bellied Guan": {
+        "common_name": "Chestnut-bellied Guan",
+        "scientific_name": "Penelope ochrogaster",
+        "habitat": "Forests, wetlands",
+        "conservation_status": "Endangered",
+        "description": "Restricted to the Pantanal and Cerrado of Brazil."
+    },
+    "Red-throated Piping Guan": {
+        "common_name": "Red-throated Piping Guan",
+        "scientific_name": "Pipile cujubi",
+        "habitat": "Rainforests",
+        "conservation_status": "Least Concern",
+        "description": "Amazonian guan with a red throat wattle."
+    },
+    "Red-faced Guan": {
+        "common_name": "Red-faced Guan",
+        "scientific_name": "Penelope dabbenei",
+        "habitat": "Cloud forests",
+        "conservation_status": "Least Concern",
+        "description": "Found in the southern Andes."
+    },
+    "Bartletts Tinamou": {
+        "common_name": "Bartlett's Tinamou",
+        "scientific_name": "Crypturellus bartletti",
+        "habitat": "Swamp forests",
+        "conservation_status": "Least Concern",
+        "description": "Inhabits seasonally flooded forests in Amazonia."
+    },
+    "White-bellied Nothura": {
+        "common_name": "White-bellied Nothura",
+        "scientific_name": "Nothura boraquira",
+        "habitat": "Dry grasslands",
+        "conservation_status": "Least Concern",
+        "description": "Found in the Caatinga of Brazil and Bolivia."
+    },
+    "Tanimbar Megapode": {
+        "common_name": "Tanimbar Megapode",
+        "scientific_name": "Megapodius tenimberensis",
+        "habitat": "Forests (Tanimbar)",
+        "conservation_status": "Near Threatened",
+        "description": "Endemic to the Tanimbar Islands."
+    },
+    "Nicobar Megapode": {
+        "common_name": "Nicobar Megapode",
+        "scientific_name": "Megapodius nicobariensis",
+        "habitat": "Forests (Nicobar)",
+        "conservation_status": "Vulnerable",
+        "description": "Endemic to the Nicobar Islands."
+    },
+    "Undulated Tinamou": {
+        "common_name": "Undulated Tinamou",
+        "scientific_name": "Crypturellus undulatus",
+        "habitat": "Gallery forests",
+        "conservation_status": "Least Concern",
+        "description": "Widespread and common in Amazonia/Cerrado. Characteristic 3-note call."
+    },
+    "Red-legged Tinamou": {
+        "common_name": "Red-legged Tinamou",
+        "scientific_name": "Crypturellus erythropus",
+        "habitat": "Dry forests, scrub",
+        "conservation_status": "Least Concern",
+        "description": "Found in northern South America."
+    },
+    "Spotted Nothura": {
+        "common_name": "Spotted Nothura",
+        "scientific_name": "Nothura maculosa",
+        "habitat": "Grasslands",
+        "conservation_status": "Least Concern",
+        "description": "Similar to a quail, very common in South American grasslands."
+    },
+    "Black-capped Tinamou": {
+        "common_name": "Black-capped Tinamou",
+        "scientific_name": "Crypturellus atrocapillus",
+        "habitat": "Forests (lowland)",
+        "conservation_status": "Least Concern",
+        "description": "Found in Peru and Bolivia."
+    },
+    "Tataupa Tinamou": {
+        "common_name": "Tataupa Tinamou",
+        "scientific_name": "Crypturellus tataupa",
+        "habitat": "Dry forests, scrub",
+        "conservation_status": "Least Concern",
+        "description": "Purple beak and legs; common in dry habitats."
+    },
+    "Melanesian Megapode": {
+        "common_name": "Melanesian Megapode",
+        "scientific_name": "Megapodius eremita",
+        "habitat": "Forests (Melanesia)",
+        "conservation_status": "Least Concern",
+        "description": "Found in the Solomon Islands and Bismarck Archipelago."
+    },
+    "Rufous-bellied Chachalaca": {
+        "common_name": "Rufous-bellied Chachalaca",
+        "scientific_name": "Ortalis wagleri",
+        "habitat": "Forests",
+        "conservation_status": "Least Concern",
+        "description": "Note: Often confused with Chestnut-headed, differs in range/plumage."
+    },
+    "Solitary Tinamou": {
+        "common_name": "Solitary Tinamou",
+        "scientific_name": "Tinamus solitarius",
+        "habitat": "Atlantic Forest",
+        "conservation_status": "Near Threatened",
+        "description": "Large tinamou of the Atlantic rainforest."
+    },
+    "Pale-browed Tinamou": {
+        "common_name": "Pale-browed Tinamou",
+        "scientific_name": "Crypturellus transfasciatus",
+        "habitat": "Dry deciduous forests",
+        "conservation_status": "Near Threatened",
+        "description": "Endemic to the Tumbesian region of Ecuador/Peru."
+    },
+    "Rufous-vented Chachalaca": {
+        "common_name": "Rufous-vented Chachalaca",
+        "scientific_name": "Ortalis ruficauda",
+        "habitat": "Forests, scrub",
+        "conservation_status": "Least Concern",
+        "description": "The national bird of Tobago."
+    },
+    "Choco Tinamou": {
+        "common_name": "Choco Tinamou",
+        "scientific_name": "Crypturellus kerriae",
+        "habitat": "Wet foothills",
+        "conservation_status": "Vulnerable",
+        "description": "Restricted to the Choc\u00f3 of Colombia and Panama."
+    },
+    "Micronesian Megapode": {
+        "common_name": "Micronesian Megapode",
+        "scientific_name": "Megapodius laperouse",
+        "habitat": "Forests (Micronesia)",
+        "conservation_status": "Endangered",
+        "description": "Found on Palau and Northern Mariana Islands."
+    },
+    "Brown Tinamou": {
+        "common_name": "Brown Tinamou",
+        "scientific_name": "Crypturellus obsoletus",
+        "habitat": "Atlantic Forest",
+        "conservation_status": "Least Concern",
+        "description": "A reddish-brown tinamou, common in its range."
+    },
+    "Band-tailed Guan": {
+        "common_name": "Band-tailed Guan",
+        "scientific_name": "Penelope argyrotis",
+        "habitat": "Montane forests",
+        "conservation_status": "Least Concern",
+        "description": "Found in the mountains of Colombia and Venezuela."
+    },
+    "Little Spotted Kiwi": {
+        "common_name": "Little Spotted Kiwi",
+        "scientific_name": "Apteryx owenii",
+        "habitat": "Forests (islands)",
+        "conservation_status": "Near Threatened",
+        "description": "The smallest kiwi species. Extinct on the mainland, survives on islands."
+    },
+    "Hooded Tinamou": {
+        "common_name": "Hooded Tinamou",
+        "scientific_name": "Nothocercus nigrocapillus",
+        "habitat": "Montane forests",
+        "conservation_status": "Least Concern",
+        "description": "Found in the Andes of Peru and Bolivia."
+    },
+    "Rusty-margined Guan": {
+        "common_name": "Rusty-margined Guan",
+        "scientific_name": "Penelope superciliaris",
+        "habitat": "Forest edges, scrub",
+        "conservation_status": "Least Concern",
+        "description": "Widespread in Brazil and adjacent countries."
+    },
+    "Collared Brushturkey": {
+        "common_name": "Collared Brushturkey",
+        "scientific_name": "Talegalla jobiensis",
+        "habitat": "Forests (New Guinea)",
+        "conservation_status": "Least Concern",
+        "description": "A brush-turkey with a bare red neck collar."
+    },
+    "Lesser Rhea": {
+        "common_name": "Lesser Rhea",
+        "scientific_name": "Rhea pennata",
+        "habitat": "Altiplano, steppe",
+        "conservation_status": "Least Concern",
+        "description": "Smaller than the Greater Rhea, lives in high altitudes or Patagonia."
+    },
+    "White-winged Guan": {
+        "common_name": "White-winged Guan",
+        "scientific_name": "Penelope albipennis",
+        "habitat": "Dry shrublands",
+        "conservation_status": "Critically Endangered",
+        "description": "Rediscovered in 1977 in Peru after being thought extinct."
+    },
+    "Spixs Guan": {
+        "common_name": "Spix's Guan",
+        "scientific_name": "Penelope jacquacu",
+        "habitat": "Amazon rainforest",
+        "conservation_status": "Least Concern",
+        "description": "Widespread across the Amazon basin."
+    },
+    "Tepui Tinamou": {
+        "common_name": "Tepui Tinamou",
+        "scientific_name": "Crypturellus ptaritepui",
+        "habitat": "Tepui summits",
+        "conservation_status": "Least Concern",
+        "description": "Restricted to the tepuis of Venezuela."
+    },
+    "Berlepschs Tinamou": {
+        "common_name": "Berlepsch's Tinamou",
+        "scientific_name": "Crypturellus berlepschi",
+        "habitat": "Wet forests",
+        "conservation_status": "Least Concern",
+        "description": "Similar to the Cinereous Tinamou, found in the Choc\u00f3."
+    },
+    "Malleefowl": {
+        "common_name": "Malleefowl",
+        "scientific_name": "Leipoa ocellata",
+        "habitat": "Semi-arid scrub (Mallee)",
+        "conservation_status": "Vulnerable",
+        "description": "Famous for regulating its mound temperature with extreme precision."
+    }
+}
