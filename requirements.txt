@@ -1,9 +1,15 @@
 flask
 flask-cors
+flask-login
+flask-sqlalchemy
+flask-wtf
 numpy
 pandas
 pillow
 librosa
+email-validator
+psycopg[binary]
+python-dotenv
 torch
 torchvision
 torchaudio

@@ -1,73 +1,104 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AviaSense - Bird Species Recognition</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <!-- Using Google Fonts: Inter for clean, modern look -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Ionicons for Icons -->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-</head>
+{% block title %}AviaSense{% endblock %}
 
-<body>
-    <div class="container">
-        <header>
-            <h1>AviaSense</h1>
-            <p>Next-Gen Multimodal Bird Species Recognition</p>
-        </header>
-
-        <main>
-            <div class="tabs">
-                <button class="tab-btn active" data-tab="image">
-                    <ion-icon name="image-outline" style="vertical-align: middle; margin-right: 5px;"></ion-icon>
-                    Image Recognition
-                </button>
-                <button class="tab-btn" data-tab="audio">
-                    <ion-icon name="musical-notes-outline"
-                        style="vertical-align: middle; margin-right: 5px;"></ion-icon>
-                    Audio Recognition
-                </button>
+{% block content %}
+{% if current_user.is_authenticated %}
+<main class="app-grid">
+    <section class="hero-panel">
+        <p class="eyebrow">Authenticated Workspace</p>
+        <h1>Multimodal bird recognition with protected access.</h1>
+        <p class="hero-copy">
+            Upload bird images or audio recordings and run recognition against the AviaSense
+            models. Your session is secured with server-side auth backed by PostgreSQL.
+        </p>
+        <div class="hero-stats">
+            <div class="stat-card">
+                <strong>Image + Audio</strong>
+                <span>Two classifiers, one secure workflow.</span>
             </div>
+            <div class="stat-card">
+                <strong>Postgres Auth</strong>
+                <span>Email-based accounts, hashed passwords, signed sessions.</span>
+            </div>
+        </div>
+    </section>
 
-            <div id="image-section" class="tab-content active">
-                <div class="upload-area" id="image-upload-area">
-                    <div class="upload-icon">
-                        <ion-icon name="cloud-upload-outline"></ion-icon>
-                    </div>
-                    <p>Drag & Drop or Click to Upload Image</p>
-                    <input type="file" id="image-input" accept="image/*" hidden>
+    <section class="workbench">
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="image">
+                <ion-icon name="image-outline"></ion-icon>
+                Image Recognition
+            </button>
+            <button class="tab-btn" data-tab="audio">
+                <ion-icon name="musical-notes-outline"></ion-icon>
+                Audio Recognition
+            </button>
+        </div>
+
+        <div id="image-section" class="tab-content active">
+            <div class="upload-area" id="image-upload-area">
+                <div class="upload-icon">
+                    <ion-icon name="cloud-upload-outline"></ion-icon>
                 </div>
-                <div id="image-preview" class="preview"></div>
-                <button id="predict-image-btn" class="action-btn" disabled>Identify Bird</button>
+                <p>Drag and drop or click to upload an image.</p>
+                <input type="file" id="image-input" accept="image/*" hidden>
             </div>
+            <div id="image-preview" class="preview"></div>
+            <button id="predict-image-btn" class="action-btn" disabled>Identify Bird</button>
+        </div>
 
-            <div id="audio-section" class="tab-content">
-                <div class="upload-area" id="audio-upload-area">
-                    <div class="upload-icon">
-                        <ion-icon name="mic-outline"></ion-icon>
-                    </div>
-                    <p>Drag & Drop or Click to Upload Audio</p>
-                    <input type="file" id="audio-input" accept="audio/*" hidden>
+        <div id="audio-section" class="tab-content">
+            <div class="upload-area" id="audio-upload-area">
+                <div class="upload-icon">
+                    <ion-icon name="mic-outline"></ion-icon>
                 </div>
-                <div id="audio-preview" class="preview"></div>
-                <button id="predict-audio-btn" class="action-btn" disabled>Identify Bird Call</button>
+                <p>Drag and drop or click to upload an audio clip.</p>
+                <input type="file" id="audio-input" accept="audio/*" hidden>
             </div>
+            <div id="audio-preview" class="preview"></div>
+            <button id="predict-audio-btn" class="action-btn" disabled>Identify Bird Call</button>
+        </div>
 
-            <div id="results-area" class="results hidden">
-                <h2>Recognition Results</h2>
-                <div id="loading" class="hidden">
-                    <span class="loader"></span>
-                    <p>Analyzing biological data...</p>
-                </div>
-                <div id="predictions"></div>
+        <div id="results-area" class="results hidden">
+            <h2>Recognition Results</h2>
+            <div id="loading" class="hidden">
+                <span class="loader"></span>
+                <p>Analyzing biological data...</p>
             </div>
-        </main>
-    </div>
-    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-</body>
+            <div id="predictions"></div>
+        </div>
+    </section>
+</main>
+{% else %}
+<main class="marketing-shell">
+    <section class="hero-panel hero-panel--public">
+        <p class="eyebrow">Secure Access</p>
+        <h1>Industry-standard authentication for AviaSense.</h1>
+        <p class="hero-copy">
+            Create an account to access protected bird recognition workflows. Authentication is
+            backed by PostgreSQL, hashed passwords, CSRF protection, and signed sessions.
+        </p>
+        <div class="cta-row">
+            <a href="{{ url_for('signup') }}" class="nav-btn">Create account</a>
+            <a href="{{ url_for('signin') }}" class="nav-btn nav-btn--ghost">Sign in</a>
+        </div>
+    </section>
 
-</html>
+    <section class="feature-grid">
+        <article class="feature-card">
+            <h2>Protected Predictions</h2>
+            <p>Prediction APIs now require an authenticated account instead of anonymous uploads.</p>
+        </article>
+        <article class="feature-card">
+            <h2>PostgreSQL Users</h2>
+            <p>User accounts, login metadata, and API tokens are persisted in Postgres.</p>
+        </article>
+        <article class="feature-card">
+            <h2>API Ready</h2>
+            <p>JSON auth endpoints are available for mobile or future frontend clients.</p>
+        </article>
+    </section>
+</main>
+{% endif %}
+{% endblock %}
