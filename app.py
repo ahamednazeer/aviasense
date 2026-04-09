@@ -14,10 +14,11 @@ from flask import (
 )
 from flask_cors import CORS
 from flask_login import current_user, login_required, login_user, logout_user
+from sqlalchemy.exc import OperationalError
 from werkzeug.utils import secure_filename
 
 from auth_forms import SignInForm, SignUpForm
-from auth_models import ApiToken, User, hash_token, utcnow
+from auth_models import ApiToken, PredictionHistory, User, hash_token, utcnow
 from config import Config
 from extensions import csrf, db, login_manager
 from models.audio_classifier import AudioClassifier
@@ -176,6 +177,30 @@ def sign_in_user(user: User, remember_me: bool) -> None:
     db.session.commit()
 
 
+def prediction_display_name(prediction: dict) -> str:
+    details = prediction.get('details') or {}
+    return details.get('common_name') or prediction.get('species') or 'Unknown species'
+
+
+def create_prediction_history(
+    user: User,
+    file_type: str,
+    source_filename: str,
+    predictions: list[dict],
+) -> PredictionHistory:
+    top_prediction = predictions[0] if predictions else {}
+    history_entry = PredictionHistory(
+        user=user,
+        input_type=file_type,
+        source_filename=source_filename,
+        top_species=prediction_display_name(top_prediction),
+        top_confidence=float(top_prediction.get('confidence') or 0.0),
+        predictions=predictions,
+    )
+    db.session.add(history_entry)
+    return history_entry
+
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -314,6 +339,48 @@ def api_logout():
     return jsonify({'message': 'Signed out successfully.'})
 
 
+@app.route('/api/history', methods=['GET'])
+def api_history():
+    user = authenticated_api_user()
+    if user is None:
+        return json_error('Authentication required.', 401)
+
+    try:
+        limit = max(1, min(int(request.args.get('limit', '25')), 100))
+    except ValueError:
+        limit = 25
+
+    history_entries = (
+        PredictionHistory.query
+        .filter_by(user_id=user.id)
+        .order_by(PredictionHistory.created_at.desc())
+        .limit(limit)
+        .all()
+    )
+
+    return jsonify({
+        'history': [entry.to_summary_dict() for entry in history_entries],
+    })
+
+
+@app.route('/api/history/<history_id>', methods=['GET'])
+def api_history_detail(history_id: str):
+    user = authenticated_api_user()
+    if user is None:
+        return json_error('Authentication required.', 401)
+
+    history_entry = PredictionHistory.query.filter_by(
+        id=history_id,
+        user_id=user.id,
+    ).first()
+    if history_entry is None:
+        return json_error('History entry not found.', 404)
+
+    return jsonify({
+        'history_entry': history_entry.to_detail_dict(),
+    })
+
+
 @app.route('/api/predict', methods=['POST'])
 def predict():
     user = authenticated_api_user()
@@ -350,8 +417,12 @@ def predict():
             species_key = prediction['species']
             prediction['details'] = loaded_bird_info.get(species_key)
 
+        history_entry = create_prediction_history(user, file_type, filename, predictions)
+        db.session.commit()
+
         return jsonify({
             'predictions': predictions,
+            'history_entry': history_entry.to_detail_dict(),
             'user': user.to_dict(),
         })
     except Exception as exc:
@@ -362,7 +433,11 @@ def predict():
 
 
 with app.app_context():
-    db.create_all()
+    if app.config.get('AUTO_CREATE_DB'):
+        try:
+            db.create_all()
+        except OperationalError as exc:
+            print(f'Database initialization skipped: {exc}')
 
 
 if __name__ == '__main__':

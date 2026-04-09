@@ -1,0 +1,405 @@
+/* ====================================================
+   AviaSense Mobile — Capture / Media
+   ==================================================== */
+
+.mode-tabs {
+    display: flex;
+    gap: 0;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    padding: 4px;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.mode-tab {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0.75rem 1rem;
+    border: none;
+    background: transparent;
+    color: var(--text-muted);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: calc(var(--radius-md) - 4px);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+    z-index: 1;
+}
+
+.mode-tab ion-icon {
+    font-size: 1.15rem;
+}
+
+.mode-tab.active {
+    background: var(--primary);
+    color: white;
+    box-shadow: 0 4px 16px var(--primary-glow);
+}
+
+.mode-tab:not(.active):active {
+    background: rgba(255,255,255,0.05);
+}
+
+.mode-section {
+    display: none;
+    animation: sectionIn 0.4s ease-out;
+}
+
+.mode-section.active {
+    display: block;
+}
+
+@keyframes sectionIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.capture-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.85rem;
+    margin-bottom: 1.5rem;
+}
+
+.capture-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1.8rem 1rem;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    color: var(--text-secondary);
+    font-family: 'Inter', sans-serif;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-tap-highlight-color: transparent;
+    overflow: hidden;
+}
+
+.capture-card:active {
+    transform: scale(0.97);
+}
+
+.capture-card.primary-capture {
+    background: linear-gradient(145deg, rgba(59,130,246,0.08), rgba(139,92,246,0.06));
+    border-color: rgba(59,130,246,0.2);
+}
+
+.capture-card.primary-capture:active {
+    border-color: rgba(59,130,246,0.4);
+}
+
+.capture-card-glow {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, var(--primary-glow), transparent 60%);
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.capture-icon-wrapper {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    margin-bottom: 0.25rem;
+    transition: all 0.3s ease;
+}
+
+.primary-capture .capture-icon-wrapper {
+    background: var(--gradient-primary);
+    color: white;
+    box-shadow: 0 6px 20px var(--primary-glow);
+}
+
+.capture-card:not(.primary-capture) .capture-icon-wrapper {
+    background: var(--glass-bg-hover);
+    border: 1px solid var(--glass-border);
+    color: var(--text-secondary);
+}
+
+.capture-label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.capture-hint {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+}
+
+.preview-container {
+    animation: previewIn 0.5s ease-out;
+}
+
+.preview-container.hidden {
+    display: none;
+}
+
+@keyframes previewIn {
+    from { opacity: 0; transform: translateY(20px) scale(0.97); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.preview-image-wrapper {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 1rem;
+    border: 1px solid var(--glass-border);
+}
+
+.preview-image-wrapper img {
+    width: 100%;
+    display: block;
+    max-height: 320px;
+    object-fit: cover;
+}
+
+.preview-clear-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+    color: white;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.preview-clear-btn:active {
+    transform: scale(0.9);
+}
+
+.preview-clear-btn.small {
+    position: static;
+    flex-shrink: 0;
+}
+
+.audio-preview-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.audio-preview-card .preview-clear-btn.small {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.audio-icon-wrapper {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: var(--gradient-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: white;
+    box-shadow: 0 4px 12px var(--accent-glow);
+}
+
+.audio-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.audio-filename {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+}
+
+.audio-duration {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+}
+
+.audio-preview-card audio {
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+}
+
+.identify-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 1rem;
+    border: none;
+    border-radius: var(--radius-md);
+    background: var(--gradient-accent);
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 6px 20px var(--accent-glow);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.identify-btn:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 10px var(--accent-glow);
+}
+
+.identify-btn:disabled {
+    background: var(--bg-elevated);
+    color: var(--text-muted);
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
+.identify-btn ion-icon {
+    font-size: 1.25rem;
+}
+
+.recording-ui {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    animation: previewIn 0.5s ease-out;
+}
+
+.recording-ui.hidden {
+    display: none;
+}
+
+.recording-visualizer {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.recording-pulse-ring {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 2px solid var(--danger);
+    opacity: 0;
+    animation: recordPulse 2s ease-out infinite;
+}
+
+.pulse-2 { animation-delay: 0.5s; }
+.pulse-3 { animation-delay: 1s; }
+
+@keyframes recordPulse {
+    0% { transform: scale(0.7); opacity: 0.6; }
+    100% { transform: scale(1.4); opacity: 0; }
+}
+
+.recording-mic-icon {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+    box-shadow: 0 8px 30px rgba(239,68,68,0.35);
+    animation: micBreathe 1.5s ease-in-out infinite;
+}
+
+@keyframes micBreathe {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.06); }
+}
+
+.recording-timer {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    font-variant-numeric: tabular-nums;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.recording-waveform {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    height: 40px;
+    margin-bottom: 2rem;
+}
+
+.recording-waveform .bar {
+    width: 3px;
+    background: var(--danger);
+    border-radius: 2px;
+    transition: height 0.1s ease;
+    opacity: 0.7;
+}
+
+.stop-record-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0.9rem 2.5rem;
+    border: none;
+    border-radius: var(--radius-md);
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(239,68,68,0.3);
+    transition: all 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.stop-record-btn:active {
+    transform: scale(0.97);
+}

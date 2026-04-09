@@ -53,8 +53,10 @@ class Config:
     )
 
     API_TOKEN_TTL_DAYS = int(os.environ.get('API_TOKEN_TTL_DAYS', '7'))
+    AUTO_CREATE_DB = env_bool('AUTO_CREATE_DB', False)
     CORS_ALLOWED_ORIGINS = env_list(
         'CORS_ALLOWED_ORIGINS',
         'http://localhost:5000,http://127.0.0.1:5000,http://localhost,'
-        'http://10.0.2.2:5000,capacitor://localhost'
+        'https://localhost,http://10.0.2.2:5000,http://10.0.2.2:5001,'
+        'capacitor://localhost'
     )

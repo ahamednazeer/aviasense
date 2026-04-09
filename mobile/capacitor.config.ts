@@ -44,6 +44,11 @@ function envFlag(name: string, fallback: boolean) {
   return value == null ? fallback : value.toLowerCase() === 'true';
 }
 
+function envValue(name: string, fallback: string) {
+  const value = process.env[name]?.trim();
+  return value ? value : fallback;
+}
+
 loadRootEnv();
 
 const config: CapacitorConfig = {
@@ -67,6 +72,7 @@ const config: CapacitorConfig = {
     }
   },
   server: {
+    androidScheme: envValue('ANDROID_SCHEME', 'http'),
     cleartext: envFlag('ANDROID_CLEARTEXT', true)
   }
 };

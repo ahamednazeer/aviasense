@@ -39,6 +39,12 @@ class User(UserMixin, db.Model):
         lazy='dynamic',
         cascade='all, delete-orphan'
     )
+    prediction_history = db.relationship(
+        'PredictionHistory',
+        back_populates='user',
+        lazy='dynamic',
+        cascade='all, delete-orphan'
+    )
 
     def set_password(self, password: str) -> None:
         self.password_hash = generate_password_hash(password)
@@ -87,3 +93,33 @@ class ApiToken(db.Model):
 
     def revoke(self) -> None:
         self.revoked_at = utcnow()
+
+
+class PredictionHistory(db.Model):
+    __tablename__ = 'prediction_history'
+
+    id = db.Column(db.String(36), primary_key=True, default=lambda: str(uuid.uuid4()))
+    user_id = db.Column(db.String(36), db.ForeignKey('users.id'), nullable=False, index=True)
+    input_type = db.Column(db.String(16), nullable=False)
+    source_filename = db.Column(db.String(255), nullable=True)
+    top_species = db.Column(db.String(255), nullable=False)
+    top_confidence = db.Column(db.Float, nullable=False, default=0.0)
+    predictions = db.Column(db.JSON, nullable=False)
+    created_at = db.Column(db.DateTime(timezone=True), nullable=False, default=utcnow, index=True)
+    user = db.relationship('User', back_populates='prediction_history')
+
+    def to_summary_dict(self) -> dict:
+        return {
+            'id': self.id,
+            'input_type': self.input_type,
+            'source_filename': self.source_filename,
+            'top_species': self.top_species,
+            'top_confidence': self.top_confidence,
+            'created_at': self.created_at.isoformat() if self.created_at else None,
+        }
+
+    def to_detail_dict(self) -> dict:
+        return {
+            **self.to_summary_dict(),
+            'predictions': self.predictions,
+        }
