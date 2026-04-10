@@ -19,10 +19,18 @@ export async function sendPrediction(file, type) {
     resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
     const formData = new FormData();
-    formData.append('file', file, file.name || fallbackFilename(type, file));
+    const uploadFilename = file.name || fallbackFilename(type, file);
+    formData.append('file', file, uploadFilename);
     formData.append('type', type);
 
     try {
+        console.log('[predict] multipart request', {
+            endpoint: CONFIG.PREDICT_ENDPOINT,
+            type,
+            fileName: uploadFilename,
+            fileType: file?.type || null,
+            fileSize: file?.size ?? null,
+        });
         let response = await apiFetch(CONFIG.PREDICT_ENDPOINT, {
             method: 'POST',
             headers: authHeaders(),
@@ -31,14 +39,25 @@ export async function sendPrediction(file, type) {
 
         if (response.status === 400) {
             const errData = await response.json().catch(() => ({}));
+            console.error('[predict] multipart 400', {
+                status: response.status,
+                error: errData.error || null,
+            });
             if (shouldRetryWithBase64(errData.error)) {
+                const base64Payload = await createBase64Payload(file, type);
+                console.log('[predict] retrying as base64 json', {
+                    type,
+                    fileName: base64Payload.filename,
+                    mimeType: base64Payload.mime_type,
+                    dataLength: base64Payload.file_data?.length ?? null,
+                });
                 response = await apiFetch(CONFIG.PREDICT_ENDPOINT, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
                         ...authHeaders(),
                     },
-                    body: JSON.stringify(await createBase64Payload(file, type)),
+                    body: JSON.stringify(base64Payload),
                 });
             } else {
                 throw new Error(errData.error || `Server error (${response.status})`);
@@ -53,10 +72,18 @@ export async function sendPrediction(file, type) {
 
         if (!response.ok) {
             const errData = await response.json().catch(() => ({}));
+            console.error('[predict] non-ok response', {
+                status: response.status,
+                error: errData.error || null,
+            });
             throw new Error(errData.error || `Server error (${response.status})`);
         }
 
         const data = await response.json();
+        console.log('[predict] success', {
+            predictionsCount: Array.isArray(data.predictions) ? data.predictions.length : null,
+            topSpecies: data.predictions?.[0]?.species || null,
+        });
         loadingState.classList.add('hidden');
 
         if (data.error) {
@@ -70,7 +97,14 @@ export async function sendPrediction(file, type) {
         showToast('Bird identified successfully!', 'success');
     } catch (error) {
         loadingState.classList.add('hidden');
-        console.error('Prediction error:', error);
+        console.error('[predict] request failed', {
+            message: error.message,
+            stack: error.stack || null,
+            type,
+            fileName: uploadFilename,
+            fileType: file?.type || null,
+            fileSize: file?.size ?? null,
+        });
 
         if (error.message.includes('Failed to fetch') || error.message.includes('NetworkError')) {
             showToast('Cannot reach server. Check your connection and server URL.', 'error');

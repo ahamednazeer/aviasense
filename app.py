@@ -52,6 +52,10 @@ def json_error(message: str, status_code: int):
     return jsonify({'error': message}), status_code
 
 
+def log_predict_event(event: str, **details):
+    app.logger.warning('predict.%s %s', event, json.dumps(details, default=str))
+
+
 def infer_prediction_file_type(file_type: str | None, filename: str, mimetype: str | None) -> str | None:
     normalized = (file_type or '').strip().lower()
     if normalized in {'image', 'audio'}:
@@ -434,12 +438,23 @@ def api_history_detail(history_id: str):
 def predict():
     user = authenticated_api_user()
     if user is None:
+        log_predict_event('unauthorized', path=request.path)
         return json_error('Authentication required.', 401)
 
     payload = request.get_json(silent=True) if request.is_json else None
     file = uploaded_file_from_request()
+    log_predict_event(
+        'request',
+        content_type=request.content_type,
+        mimetype=request.mimetype,
+        content_length=request.content_length,
+        form_keys=list(request.form.keys()),
+        file_keys=list(request.files.keys()),
+        json_keys=sorted(list(payload.keys())) if isinstance(payload, dict) else [],
+    )
 
     if file is None and not payload:
+        log_predict_event('reject.no_payload')
         return json_error('No file payload.', 400)
 
     raw_bytes = None
@@ -457,6 +472,7 @@ def predict():
     else:
         file_data = (payload.get('file_data') or '').strip()
         if not file_data:
+            log_predict_event('reject.json_missing_file_data', payload_keys=sorted(list(payload.keys())))
             return json_error('No file payload.', 400)
 
         if ',' in file_data:
@@ -465,9 +481,11 @@ def predict():
         try:
             raw_bytes = base64.b64decode(file_data, validate=True)
         except (ValueError, TypeError):
+            log_predict_event('reject.invalid_base64', data_prefix=file_data[:32])
             return json_error('Invalid file payload.', 400)
 
         if not raw_bytes:
+            log_predict_event('reject.empty_base64_payload')
             return json_error('Empty file payload.', 400)
 
         original_filename = payload.get('filename') or ''
@@ -479,12 +497,27 @@ def predict():
         )
 
     if file_type is None:
+        log_predict_event(
+            'reject.unsupported_type',
+            filename=original_filename,
+            mimetype=mimetype,
+            explicit_type=request.form.get('type') if file is not None else payload.get('type'),
+        )
         return json_error('Unsupported upload type.', 400)
 
     filename = normalize_uploaded_filename(
         original_filename,
         file_type,
         mimetype,
+    )
+    log_predict_event(
+        'accepted',
+        transport='multipart' if file is not None else 'json',
+        original_filename=original_filename,
+        stored_filename=filename,
+        mimetype=mimetype,
+        inferred_type=file_type,
+        byte_length=len(raw_bytes) if raw_bytes is not None else None,
     )
     filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
     if file is not None:
@@ -501,6 +534,12 @@ def predict():
             predictions = get_audio_model().predict(filepath)
             for prediction in predictions:
                 prediction['species'] = prediction['species'].replace('_sound', '')
+        log_predict_event(
+            'success',
+            inferred_type=file_type,
+            predictions_count=len(predictions),
+            top_species=predictions[0]['species'] if predictions else None,
+        )
         for prediction in predictions:
             species_key = prediction['species']
             prediction['details'] = loaded_bird_info.get(species_key)
@@ -514,6 +553,13 @@ def predict():
             'user': user.to_dict(),
         })
     except Exception as exc:
+        log_predict_event(
+            'exception',
+            inferred_type=file_type,
+            stored_filename=filename,
+            error_type=type(exc).__name__,
+            error=str(exc),
+        )
         return json_error(str(exc), 500)
     finally:
         if os.path.exists(filepath):
