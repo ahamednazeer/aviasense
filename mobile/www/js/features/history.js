@@ -164,6 +164,7 @@ function renderHistoryList(items) {
         card.type = 'button';
         card.className = 'history-card';
         card.innerHTML = `
+            ${item.source_image_url ? `<div class="history-card-image-wrap"><img class="history-card-image" src="${item.source_image_url}" alt="${item.top_species || 'Bird image'}"></div>` : ''}
             <div class="history-card-top">
                 <span class="history-type-badge">${formatInputType(item.input_type)}</span>
                 <span class="history-card-time">${formatTimestamp(item.created_at)}</span>
@@ -186,6 +187,15 @@ function renderHistoryDetail(entry) {
     $('#history-detail-meta').textContent = `${formatInputType(entry.input_type)} scan • ${formatTimestamp(entry.created_at)}`;
     $('#history-detail-confidence').textContent = formatConfidence(entry.top_confidence);
     $('#history-detail-source').textContent = entry.source_filename || 'Captured in app';
+    const detailImage = $('#history-detail-image');
+    if (entry.source_image_url) {
+        detailImage.src = entry.source_image_url;
+        detailImage.alt = entry.top_species || 'Bird image';
+        detailImage.classList.remove('hidden');
+    } else {
+        detailImage.src = '';
+        detailImage.classList.add('hidden');
+    }
     renderPredictions(entry.predictions || [], $('#history-detail-predictions'));
 
     $('#history-list-screen').classList.add('hidden');

@@ -5,15 +5,18 @@ export const STORAGE_KEYS = {
 
 const runtimeConfig = globalThis.__AVIASENSE_RUNTIME_CONFIG__ || {};
 const runtimeApiBaseUrl = normalizeApiBaseUrl(runtimeConfig.ANDROID_API_BASE_URL);
+const emulatorFriendlyRuntimeApiBaseUrl = normalizeAndroidEmulatorUrl(runtimeApiBaseUrl);
 
 export const CONFIG = {
     API_BASE_URL_CANDIDATES: uniqueUrls([
+        emulatorFriendlyRuntimeApiBaseUrl,
         runtimeApiBaseUrl,
         'http://10.0.2.2:5000',
         'http://10.0.2.2:5001',
     ]),
     PREDICT_ENDPOINT: '/api/predict',
     HISTORY_ENDPOINT: '/api/history',
+    VALIDATE_IMAGE_ENDPOINT: '/api/validate-image',
     SIGNIN_ENDPOINT: '/api/auth/signin',
     SIGNUP_ENDPOINT: '/api/auth/signup',
     ME_ENDPOINT: '/api/auth/me',
@@ -25,6 +28,12 @@ export const state = {
     currentAppView: 'scan',
     currentMode: 'image',
     imageFile: null,
+    imageValidation: {
+        isValidating: false,
+        isBirdCandidate: false,
+        message: '',
+        confidence: null,
+    },
     audioFile: null,
     isRecording: false,
     mediaRecorder: null,
@@ -61,6 +70,24 @@ function normalizeApiBaseUrl(value) {
     }
 
     return value.trim().replace(/\/+$/, '');
+}
+
+function normalizeAndroidEmulatorUrl(value) {
+    if (!value) {
+        return '';
+    }
+
+    try {
+        const url = new URL(value);
+        if (url.hostname === 'localhost' || url.hostname === '127.0.0.1') {
+            url.hostname = '10.0.2.2';
+            return url.toString().replace(/\/+$/, '');
+        }
+    } catch {
+        return value;
+    }
+
+    return value;
 }
 
 function uniqueUrls(urls) {

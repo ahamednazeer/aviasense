@@ -1,6 +1,7 @@
 import json
 import os
 import base64
+import shutil
 from pathlib import Path
 from threading import Lock
 from urllib.parse import urljoin, urlsplit
@@ -126,6 +127,7 @@ login_manager.login_message = 'Please sign in to continue.'
 login_manager.login_message_category = 'warning'
 
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
+os.makedirs(os.path.join(app.config['UPLOAD_FOLDER'], 'history'), exist_ok=True)
 
 image_model = None
 audio_model = None
@@ -258,6 +260,47 @@ def create_prediction_history(
     )
     db.session.add(history_entry)
     return history_entry
+
+
+def history_media_filename(history_entry: PredictionHistory) -> str | None:
+    if history_entry.input_type != 'image':
+        return None
+
+    extension = Path(history_entry.source_filename or '').suffix.lower() or '.jpg'
+    return f'{history_entry.id}{extension}'
+
+
+def history_media_path(history_entry: PredictionHistory) -> str | None:
+    filename = history_media_filename(history_entry)
+    if not filename:
+        return None
+    return os.path.join(app.config['UPLOAD_FOLDER'], 'history', filename)
+
+
+def history_media_url(history_entry: PredictionHistory) -> str | None:
+    media_path = history_media_path(history_entry)
+    if not media_path or not os.path.exists(media_path):
+        return None
+
+    return url_for(
+        'static',
+        filename=f'uploads/history/{os.path.basename(media_path)}',
+        _external=True,
+    )
+
+
+def serialize_history_entry(history_entry: PredictionHistory, include_predictions: bool = False) -> dict:
+    payload = history_entry.to_summary_dict()
+    payload['source_image_url'] = history_media_url(history_entry)
+    if include_predictions:
+        payload['predictions'] = history_entry.predictions
+    return payload
+
+
+def persist_history_image(temp_filepath: str, history_entry: PredictionHistory) -> None:
+    destination = history_media_path(history_entry)
+    if destination:
+        shutil.copyfile(temp_filepath, destination)
 
 
 @app.route('/')
@@ -418,7 +461,7 @@ def api_history():
     )
 
     return jsonify({
-        'history': [entry.to_summary_dict() for entry in history_entries],
+        'history': [serialize_history_entry(entry) for entry in history_entries],
     })
 
 
@@ -436,11 +479,51 @@ def api_history_detail(history_id: str):
         return json_error('History entry not found.', 404)
 
     return jsonify({
-        'history_entry': history_entry.to_detail_dict(),
+        'history_entry': serialize_history_entry(history_entry, include_predictions=True),
     })
 
 
+@app.route('/api/validate-image', methods=['POST'])
+@csrf.exempt
+def api_validate_image():
+    user = authenticated_api_user()
+    if user is None:
+        return json_error('Authentication required.', 401)
+
+    file = uploaded_file_from_request()
+    if file is None:
+        return json_error('No image payload.', 400)
+
+    original_filename = file.filename or ''
+    mimetype = file.mimetype or ''
+    file_type = infer_prediction_file_type('image', original_filename, mimetype)
+    if file_type != 'image':
+        return json_error('Unsupported image type.', 400)
+
+    filename = normalize_uploaded_filename(original_filename, 'image', mimetype)
+    filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+    file.save(filepath)
+
+    try:
+        predictions = get_image_model().predict(filepath, top_k=1)
+        top_prediction = predictions[0] if predictions else {}
+        confidence = float(top_prediction.get('confidence') or 0.0)
+        threshold = float(app.config['IMAGE_VALIDATION_MIN_CONFIDENCE'])
+        return jsonify({
+            'is_bird_candidate': confidence >= threshold,
+            'confidence': confidence,
+            'threshold': threshold,
+            'top_species': top_prediction.get('species'),
+        })
+    except Exception as exc:
+        return json_error(str(exc), 500)
+    finally:
+        if os.path.exists(filepath):
+            os.remove(filepath)
+
+
 @app.route('/api/predict', methods=['POST'])
+@csrf.exempt
 def predict():
     user = authenticated_api_user()
     if user is None:
@@ -551,11 +634,14 @@ def predict():
             prediction['details'] = loaded_bird_info.get(species_key)
 
         history_entry = create_prediction_history(user, file_type, filename, predictions)
+        db.session.flush()
+        if file_type == 'image':
+            persist_history_image(filepath, history_entry)
         db.session.commit()
 
         return jsonify({
             'predictions': predictions,
-            'history_entry': history_entry.to_detail_dict(),
+            'history_entry': serialize_history_entry(history_entry, include_predictions=True),
             'user': user.to_dict(),
         })
     except Exception as exc:

@@ -155,6 +155,25 @@
     display: none;
 }
 
+.image-validation-message {
+    margin: 0 0 0.9rem;
+    color: var(--text-muted);
+    font-size: 0.82rem;
+    line-height: 1.45;
+}
+
+.image-validation-message.hidden {
+    display: none;
+}
+
+.image-validation-message.is-error {
+    color: #fca5a5;
+}
+
+.image-validation-message.is-success {
+    color: #93c5fd;
+}
+
 @keyframes previewIn {
     from { opacity: 0; transform: translateY(20px) scale(0.97); }
     to { opacity: 1; transform: translateY(0) scale(1); }

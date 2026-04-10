@@ -102,6 +102,21 @@
     -webkit-tap-highlight-color: transparent;
 }
 
+.history-card-image-wrap {
+    margin: -1rem -1.05rem 0.9rem;
+    height: 132px;
+    overflow: hidden;
+    border-radius: var(--radius-lg) var(--radius-lg) 18px 18px;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.history-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
 .history-card-top,
 .history-card-bottom,
 .history-detail-top,
@@ -187,6 +202,20 @@
 
 .history-detail-card {
     padding: 1.1rem;
+}
+
+.history-detail-image {
+    width: calc(100% + 2.2rem);
+    margin: -1.1rem -1.1rem 1rem;
+    max-height: 260px;
+    object-fit: cover;
+    display: block;
+    border-radius: var(--radius-lg) var(--radius-lg) 20px 20px;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.history-detail-image.hidden {
+    display: none;
 }
 
 .history-detail-card h2 {

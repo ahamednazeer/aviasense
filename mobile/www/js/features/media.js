@@ -1,4 +1,5 @@
 import { $, $$, CONFIG, state } from '../core/state.js';
+import { apiFetch, authHeaders } from '../core/api.js';
 import { requireAuth } from '../auth/session.js';
 import { showToast, triggerHaptic } from '../ui/feedback.js';
 import { checkOnline } from '../ui/network.js';
@@ -18,15 +19,15 @@ export function initImageCapture({ onPredict }) {
                     height: 1024,
                     correctOrientation: true,
                 });
-                handleImageDataUrl(image.dataUrl);
+                await handleImageDataUrl(image.dataUrl);
             } else {
                 const input = document.createElement('input');
                 input.type = 'file';
                 input.accept = 'image/*';
                 input.capture = 'environment';
-                input.onchange = (event) => {
+                input.onchange = async (event) => {
                     const file = event.target.files[0];
-                    if (file) handleImageFile(file);
+                    if (file) await handleImageFile(file);
                 };
                 input.click();
             }
@@ -50,14 +51,14 @@ export function initImageCapture({ onPredict }) {
                     width: 1024,
                     height: 1024,
                 });
-                handleImageDataUrl(image.dataUrl);
+                await handleImageDataUrl(image.dataUrl);
             } else {
                 const input = document.createElement('input');
                 input.type = 'file';
                 input.accept = 'image/*';
-                input.onchange = (event) => {
+                input.onchange = async (event) => {
                     const file = event.target.files[0];
-                    if (file) handleImageFile(file);
+                    if (file) await handleImageFile(file);
                 };
                 input.click();
             }
@@ -70,6 +71,7 @@ export function initImageCapture({ onPredict }) {
 
     $('#btn-clear-image').addEventListener('click', () => {
         state.imageFile = null;
+        resetImageValidation();
         $('#image-preview').src = '';
         $('#image-preview-container').classList.add('hidden');
         $('#image-mode .capture-grid').style.display = '';
@@ -129,6 +131,7 @@ export function initWaveformBars() {
 
 export function resetCaptureState() {
     state.imageFile = null;
+    resetImageValidation();
     state.audioFile = null;
     $('#image-preview').src = '';
     $('#image-preview-container').classList.add('hidden');
@@ -139,28 +142,111 @@ export function resetCaptureState() {
     });
 }
 
-function handleImageDataUrl(dataUrl) {
-    fetch(dataUrl)
-        .then((res) => res.blob())
-        .then((blob) => {
-            const file = new File([blob], 'capture.jpg', { type: 'image/jpeg' });
-            state.imageFile = file;
-            showImagePreview(dataUrl);
-        });
+async function handleImageDataUrl(dataUrl) {
+    const response = await fetch(dataUrl);
+    const blob = await response.blob();
+    const file = new File([blob], 'capture.jpg', { type: 'image/jpeg' });
+    await handleImageFile(file, dataUrl);
 }
 
-function handleImageFile(file) {
+async function handleImageFile(file, previewSrc = null) {
     state.imageFile = file;
-    const reader = new FileReader();
-    reader.onload = (event) => showImagePreview(event.target.result);
-    reader.readAsDataURL(file);
+    showImagePreview(previewSrc || await readFileAsDataUrl(file));
+    await validateSelectedImage(file);
 }
 
 function showImagePreview(src) {
     $('#image-preview').src = src;
     $('#image-preview-container').classList.remove('hidden');
     $('#image-mode .capture-grid').style.display = 'none';
+    updateImageValidationUI();
     triggerHaptic();
+}
+
+async function validateSelectedImage(file) {
+    state.imageValidation = {
+        isValidating: true,
+        isBirdCandidate: false,
+        message: 'Checking whether this looks like a bird photo...',
+        confidence: null,
+    };
+    updateImageValidationUI();
+
+    const formData = new FormData();
+    formData.append('file', file, file.name || 'capture.jpg');
+
+    try {
+        const response = await apiFetch(CONFIG.VALIDATE_IMAGE_ENDPOINT, {
+            method: 'POST',
+            headers: authHeaders(),
+            body: formData,
+        });
+        const data = await response.json().catch(() => ({}));
+
+        if (response.status === 401) {
+            throw new Error(data.error || 'Session expired. Please sign in again.');
+        }
+
+        if (!response.ok) {
+            throw new Error(data.error || `Image validation failed (${response.status})`);
+        }
+
+        const confidencePercent = `${((data.confidence || 0) * 100).toFixed(1)}%`;
+        state.imageValidation = {
+            isValidating: false,
+            isBirdCandidate: Boolean(data.is_bird_candidate),
+            message: data.is_bird_candidate
+                ? `Bird candidate detected (${confidencePercent} confidence).`
+                : `This image does not look like a bird photo (${confidencePercent} confidence).`,
+            confidence: data.confidence || 0,
+        };
+
+        if (!data.is_bird_candidate) {
+            showToast('Please choose an image that clearly contains a bird.', 'error');
+        }
+    } catch (error) {
+        state.imageValidation = {
+            isValidating: false,
+            isBirdCandidate: false,
+            message: error.message || 'Unable to validate image.',
+            confidence: null,
+        };
+        showToast(state.imageValidation.message, 'error');
+    }
+
+    updateImageValidationUI();
+}
+
+function updateImageValidationUI() {
+    const button = $('#btn-identify-image');
+    const message = $('#image-validation-message');
+    const validation = state.imageValidation;
+    const text = validation.message || '';
+
+    button.disabled = validation.isValidating || !state.imageFile || !validation.isBirdCandidate;
+    message.textContent = text;
+    message.classList.toggle('hidden', !text);
+    message.classList.toggle('is-error', Boolean(text) && !validation.isValidating && !validation.isBirdCandidate);
+    message.classList.toggle('is-success', Boolean(text) && validation.isBirdCandidate);
+}
+
+function resetImageValidation() {
+    state.imageValidation = {
+        isValidating: false,
+        isBirdCandidate: false,
+        message: '',
+        confidence: null,
+    };
+    updateImageValidationUI();
+}
+
+function readFileAsDataUrl(file) {
+    return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = (event) => resolve(event.target.result);
+        reader.onerror = () => reject(new Error('Unable to preview image.'));
+        reader.readAsDataURL(file);
+    });
 }
 
 async function startRecording() {
