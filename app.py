@@ -1,5 +1,6 @@
 import json
 import os
+import base64
 from pathlib import Path
 from threading import Lock
 from urllib.parse import urljoin, urlsplit
@@ -84,6 +85,17 @@ def normalize_uploaded_filename(filename: str, file_type: str | None, mimetype: 
         default_ext = '.webm'
 
     return f'upload-{uuid4().hex}{default_ext}'
+
+
+def uploaded_file_from_request():
+    file = request.files.get('file')
+    if file is not None:
+        return file
+
+    for candidate in request.files.values():
+        return candidate
+
+    return None
 
 
 app = Flask(__name__)
@@ -424,25 +436,62 @@ def predict():
     if user is None:
         return json_error('Authentication required.', 401)
 
-    if 'file' not in request.files:
-        return json_error('No file part.', 400)
+    payload = request.get_json(silent=True) if request.is_json else None
+    file = uploaded_file_from_request()
 
-    file = request.files['file']
-    file_type = infer_prediction_file_type(
-        request.form.get('type'),
-        file.filename,
-        file.mimetype,
-    )
+    if file is None and not payload:
+        return json_error('No file payload.', 400)
+
+    raw_bytes = None
+    original_filename = ''
+    mimetype = ''
+
+    if file is not None:
+        original_filename = file.filename or ''
+        mimetype = file.mimetype or ''
+        file_type = infer_prediction_file_type(
+            request.form.get('type'),
+            original_filename,
+            mimetype,
+        )
+    else:
+        file_data = (payload.get('file_data') or '').strip()
+        if not file_data:
+            return json_error('No file payload.', 400)
+
+        if ',' in file_data:
+            file_data = file_data.split(',', 1)[1]
+
+        try:
+            raw_bytes = base64.b64decode(file_data, validate=True)
+        except (ValueError, TypeError):
+            return json_error('Invalid file payload.', 400)
+
+        if not raw_bytes:
+            return json_error('Empty file payload.', 400)
+
+        original_filename = payload.get('filename') or ''
+        mimetype = payload.get('mime_type') or ''
+        file_type = infer_prediction_file_type(
+            payload.get('type'),
+            original_filename,
+            mimetype,
+        )
+
     if file_type is None:
         return json_error('Unsupported upload type.', 400)
 
     filename = normalize_uploaded_filename(
-        file.filename,
+        original_filename,
         file_type,
-        file.mimetype,
+        mimetype,
     )
     filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
-    file.save(filepath)
+    if file is not None:
+        file.save(filepath)
+    else:
+        with open(filepath, 'wb') as uploaded_file:
+            uploaded_file.write(raw_bytes)
 
     try:
         loaded_bird_info = get_bird_info()
