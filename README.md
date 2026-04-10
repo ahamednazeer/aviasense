@@ -106,3 +106,20 @@ Notes:
   ```bash
   DOCKER_DEFAULT_PLATFORM=linux/amd64 docker compose up --build backend
   ```
+
+## Mobile Android
+
+The Capacitor Android app reads `ANDROID_API_BASE_URL` from the root `.env` file and writes it into `mobile/www/js/core/runtime-config.js` before each Capacitor command.
+
+1. Set the backend URL in `.env`
+   ```bash
+   ANDROID_API_BASE_URL=https://your-backend-host
+   ```
+
+2. Sync or run the Android app from `mobile/`
+   ```bash
+   npm run cap:sync
+   npm run cap:run
+   ```
+
+If the backend is hosted separately, make sure that backend allows `http://localhost` or `capacitor://localhost` in `CORS_ALLOWED_ORIGINS`.

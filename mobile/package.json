@@ -4,9 +4,10 @@
   "description": "AviaSense - AI Bird Species Recognition Mobile App",
   "main": "index.js",
   "scripts": {
-    "cap:sync": "npx cap sync android",
-    "cap:open": "npx cap open android",
-    "cap:run": "npx cap run android"
+    "prepare:runtime-config": "node scripts/write-runtime-config.cjs",
+    "cap:sync": "npm run prepare:runtime-config && npx cap sync android",
+    "cap:open": "npm run prepare:runtime-config && npx cap open android",
+    "cap:run": "npm run prepare:runtime-config && npx cap run android"
   },
   "keywords": [
     "bird",

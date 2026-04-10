@@ -3,11 +3,15 @@ export const STORAGE_KEYS = {
     authUser: 'aviasense_auth_user',
 };
 
+const runtimeConfig = globalThis.__AVIASENSE_RUNTIME_CONFIG__ || {};
+const runtimeApiBaseUrl = normalizeApiBaseUrl(runtimeConfig.ANDROID_API_BASE_URL);
+
 export const CONFIG = {
-    API_BASE_URL_CANDIDATES: [
+    API_BASE_URL_CANDIDATES: uniqueUrls([
+        runtimeApiBaseUrl,
         'http://10.0.2.2:5000',
         'http://10.0.2.2:5001',
-    ],
+    ]),
     PREDICT_ENDPOINT: '/api/predict',
     HISTORY_ENDPOINT: '/api/history',
     SIGNIN_ENDPOINT: '/api/auth/signin',
@@ -49,4 +53,16 @@ function parseStoredUser() {
     } catch {
         return null;
     }
+}
+
+function normalizeApiBaseUrl(value) {
+    if (!value || typeof value !== 'string') {
+        return '';
+    }
+
+    return value.trim().replace(/\/+$/, '');
+}
+
+function uniqueUrls(urls) {
+    return urls.filter((url, index) => url && urls.indexOf(url) === index);
 }
