@@ -1,7 +1,9 @@
 import json
 import os
+from pathlib import Path
 from threading import Lock
 from urllib.parse import urljoin, urlsplit
+from uuid import uuid4
 
 from flask import (
     Flask,
@@ -47,6 +49,41 @@ def next_redirect_target(default_endpoint: str = 'index') -> str:
 
 def json_error(message: str, status_code: int):
     return jsonify({'error': message}), status_code
+
+
+def infer_prediction_file_type(file_type: str | None, filename: str, mimetype: str | None) -> str | None:
+    normalized = (file_type or '').strip().lower()
+    if normalized in {'image', 'audio'}:
+        return normalized
+
+    mime = (mimetype or '').strip().lower()
+    if mime.startswith('image/'):
+        return 'image'
+    if mime.startswith('audio/'):
+        return 'audio'
+
+    extension = Path(filename).suffix.lower()
+    if extension in {'.jpg', '.jpeg', '.png', '.gif', '.bmp', '.webp'}:
+        return 'image'
+    if extension in {'.wav', '.mp3', '.m4a', '.mp4', '.webm', '.ogg'}:
+        return 'audio'
+
+    return None
+
+
+def normalize_uploaded_filename(filename: str, file_type: str | None, mimetype: str | None) -> str:
+    sanitized = secure_filename(filename or '')
+    if sanitized:
+        return sanitized
+
+    inferred_type = infer_prediction_file_type(file_type, filename, mimetype)
+    default_ext = '.bin'
+    if inferred_type == 'image':
+        default_ext = '.jpg'
+    elif inferred_type == 'audio':
+        default_ext = '.webm'
+
+    return f'upload-{uuid4().hex}{default_ext}'
 
 
 app = Flask(__name__)
@@ -391,14 +428,19 @@ def predict():
         return json_error('No file part.', 400)
 
     file = request.files['file']
-    if file.filename == '':
-        return json_error('No selected file.', 400)
+    file_type = infer_prediction_file_type(
+        request.form.get('type'),
+        file.filename,
+        file.mimetype,
+    )
+    if file_type is None:
+        return json_error('Unsupported upload type.', 400)
 
-    file_type = request.form.get('type')
-    if not file_type:
-        return json_error('No type specified.', 400)
-
-    filename = secure_filename(file.filename)
+    filename = normalize_uploaded_filename(
+        file.filename,
+        file_type,
+        file.mimetype,
+    )
     filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
     file.save(filepath)
 
@@ -410,9 +452,6 @@ def predict():
             predictions = get_audio_model().predict(filepath)
             for prediction in predictions:
                 prediction['species'] = prediction['species'].replace('_sound', '')
-        else:
-            return json_error('Invalid type.', 400)
-
         for prediction in predictions:
             species_key = prediction['species']
             prediction['details'] = loaded_bird_info.get(species_key)
