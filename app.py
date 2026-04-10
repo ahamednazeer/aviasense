@@ -53,7 +53,9 @@ def json_error(message: str, status_code: int):
 
 
 def log_predict_event(event: str, **details):
-    app.logger.warning('predict.%s %s', event, json.dumps(details, default=str))
+    payload = json.dumps(details, default=str)
+    app.logger.warning('predict.%s %s', event, payload)
+    print(f'predict.{event} {payload}', flush=True)
 
 
 def infer_prediction_file_type(file_type: str | None, filename: str, mimetype: str | None) -> str | None:
@@ -107,7 +109,11 @@ app.config.from_object(Config)
 
 CORS(
     app,
-    resources={r'/api/*': {'origins': app.config['CORS_ALLOWED_ORIGINS']}},
+    resources={
+        r'/api/.*': {
+            'origins': app.config['CORS_ALLOWED_ORIGINS']
+        }
+    },
     supports_credentials=True
 )
 

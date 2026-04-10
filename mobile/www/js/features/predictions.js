@@ -24,7 +24,7 @@ export async function sendPrediction(file, type) {
     formData.append('type', type);
 
     try {
-        console.log('[predict] multipart request', {
+        logPredict('multipart request', {
             endpoint: CONFIG.PREDICT_ENDPOINT,
             type,
             fileName: uploadFilename,
@@ -39,13 +39,13 @@ export async function sendPrediction(file, type) {
 
         if (response.status === 400) {
             const errData = await response.json().catch(() => ({}));
-            console.error('[predict] multipart 400', {
+            logPredict('multipart 400', {
                 status: response.status,
                 error: errData.error || null,
-            });
+            }, 'error');
             if (shouldRetryWithBase64(errData.error)) {
                 const base64Payload = await createBase64Payload(file, type);
-                console.log('[predict] retrying as base64 json', {
+                logPredict('retrying as base64 json', {
                     type,
                     fileName: base64Payload.filename,
                     mimeType: base64Payload.mime_type,
@@ -72,15 +72,15 @@ export async function sendPrediction(file, type) {
 
         if (!response.ok) {
             const errData = await response.json().catch(() => ({}));
-            console.error('[predict] non-ok response', {
+            logPredict('non-ok response', {
                 status: response.status,
                 error: errData.error || null,
-            });
+            }, 'error');
             throw new Error(errData.error || `Server error (${response.status})`);
         }
 
         const data = await response.json();
-        console.log('[predict] success', {
+        logPredict('success', {
             predictionsCount: Array.isArray(data.predictions) ? data.predictions.length : null,
             topSpecies: data.predictions?.[0]?.species || null,
         });
@@ -97,14 +97,14 @@ export async function sendPrediction(file, type) {
         showToast('Bird identified successfully!', 'success');
     } catch (error) {
         loadingState.classList.add('hidden');
-        console.error('[predict] request failed', {
+        logPredict('request failed', {
             message: error.message,
             stack: error.stack || null,
             type,
             fileName: uploadFilename,
             fileType: file?.type || null,
             fileSize: file?.size ?? null,
-        });
+        }, 'error');
 
         if (error.message.includes('Failed to fetch') || error.message.includes('NetworkError')) {
             showToast('Cannot reach server. Check your connection and server URL.', 'error');
@@ -159,4 +159,22 @@ function inferExtension(type, mimeType) {
     if (mime.includes('ogg')) return 'ogg';
     if (mime.includes('webm')) return 'webm';
     return type === 'audio' ? 'webm' : 'jpg';
+}
+
+function logPredict(message, details, level = 'log') {
+    const serialized = safeStringify(details);
+    const line = `[predict] ${message} ${serialized}`;
+    if (level === 'error') {
+        console.error(line);
+        return;
+    }
+    console.log(line);
+}
+
+function safeStringify(value) {
+    try {
+        return JSON.stringify(value);
+    } catch {
+        return String(value);
+    }
 }
