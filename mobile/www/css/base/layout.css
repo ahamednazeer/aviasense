@@ -269,6 +269,161 @@ body::before {
     width: 100%;
 }
 
+.server-settings-card {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    background:
+        linear-gradient(180deg, rgba(59, 130, 246, 0.08), rgba(15, 23, 42, 0.92)),
+        var(--glass-bg);
+    box-shadow: var(--shadow-sm);
+}
+
+.server-settings-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.75rem;
+}
+
+.server-settings-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.server-settings-kicker {
+    display: inline-block;
+    margin-bottom: 0.3rem;
+    font-size: 0.68rem;
+    color: var(--primary-light);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.server-settings-header h2 {
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.server-settings-timeout {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.4rem 0.75rem;
+    border-radius: 999px;
+    background: rgba(16, 185, 129, 0.14);
+    color: var(--accent-light);
+    font-size: 0.74rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.server-settings-copy {
+    margin-top: 0.65rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.server-settings-form {
+    margin-top: 1rem;
+}
+
+.server-settings-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+.server-settings-field span {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: 0.2px;
+}
+
+.server-settings-field input {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    background: rgba(6, 8, 15, 0.72);
+    color: var(--text-primary);
+    font: inherit;
+}
+
+.server-settings-field input::placeholder {
+    color: var(--text-muted);
+}
+
+.server-settings-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 0.85rem;
+}
+
+.server-settings-actions button {
+    flex: 1;
+    min-height: 46px;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.server-settings-save {
+    background: var(--gradient-primary);
+    color: white;
+    box-shadow: 0 10px 24px rgba(59, 130, 246, 0.26);
+}
+
+.server-settings-reset {
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--text-primary);
+    border-color: var(--glass-border) !important;
+}
+
+.server-settings-current {
+    margin-top: 0.85rem;
+    color: var(--text-secondary);
+    font-size: 0.82rem;
+    line-height: 1.5;
+    word-break: break-word;
+}
+
+.server-settings-toggle {
+    min-height: 34px;
+    padding: 0.45rem 0.9rem;
+    border-radius: 999px;
+    border: 1px solid var(--glass-border);
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--text-primary);
+    font: inherit;
+    font-size: 0.78rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.server-settings-card.compact {
+    padding: 0.85rem 1rem;
+}
+
+.server-settings-card.compact .server-settings-copy,
+.server-settings-card.compact .server-settings-form {
+    display: none;
+}
+
+.server-settings-card.compact .server-settings-current {
+    margin-top: 0.65rem;
+    padding-right: 0.25rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .app-content.hidden,
 .auth-screen.hidden,
 .auth-summary.hidden,

@@ -67,6 +67,50 @@
 
         <!-- Main Content -->
         <main id="main-content" class="main-content">
+            <section class="server-settings-card">
+                <div class="server-settings-header">
+                    <div>
+                        <span class="server-settings-kicker">Connection</span>
+                        <h2>Backend Server</h2>
+                    </div>
+                    <div class="server-settings-header-actions">
+                        <span id="server-settings-timeout" class="server-settings-timeout"></span>
+                        <button type="button" id="btn-toggle-server-settings" class="server-settings-toggle hidden">Edit</button>
+                    </div>
+                </div>
+                <div id="server-settings-body" class="server-settings-body">
+                    <p class="server-settings-copy">Update the Android API base URL here whenever your ngrok address changes.</p>
+                    <form id="server-settings-form" class="server-settings-form">
+                        <label class="server-settings-field">
+                            <span>ANDROID_API_BASE_URL</span>
+                            <input
+                                id="android-api-base-url-input"
+                                type="url"
+                                inputmode="url"
+                                placeholder="https://your-ngrok-url.ngrok-free.app"
+                                autocomplete="off">
+                        </label>
+                        <label class="server-settings-field">
+                            <span>Request Timeout (seconds)</span>
+                            <input
+                                id="api-timeout-seconds-input"
+                                type="number"
+                                inputmode="numeric"
+                                min="5"
+                                max="300"
+                                step="1"
+                                placeholder="90"
+                                autocomplete="off">
+                        </label>
+                        <div class="server-settings-actions">
+                            <button type="submit" class="server-settings-save">Save Settings</button>
+                            <button type="button" id="btn-reset-server-settings" class="server-settings-reset">Use Default</button>
+                        </div>
+                    </form>
+                </div>
+                <p id="server-settings-current" class="server-settings-current"></p>
+            </section>
+
             <section id="auth-screen" class="auth-screen hidden">
                 <div class="auth-hero">
                     <span class="auth-kicker">Secure Access</span>

@@ -29,6 +29,7 @@ export function renderAuthState() {
     $('#app-content').classList.toggle('hidden', !isAuthenticated);
     $('#auth-summary').classList.toggle('hidden', !isAuthenticated);
     $('#btn-logout').classList.toggle('hidden', !isAuthenticated);
+    document.dispatchEvent(new CustomEvent('auth-state-changed'));
 
     $('#auth-user-name').textContent = isAuthenticated
         ? state.authUser.full_name || state.authUser.email || 'User'
